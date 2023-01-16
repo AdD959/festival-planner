@@ -3,7 +3,7 @@
         <div class="max-w-6xl bg-slate-200 w-full relative flex flex-col items-center rounded-xl p-5 pt-10">
             <h2 class="text-5xl mb-5">Glastonbury Festival</h2>
             <span class="rounded-full bg-green-700 text-white font-bold absolute top-10 right-10 py-4 px-6"
-                @click="test()">S</span>
+                @click="getSpotifyTracks()">S</span>
             <section class="bg-white rounded-lg w-full p-5">
                 <div id="pyramid" class="flex w-full">
                     <h3 class="text-2xl mr-10">Pyramid</h3>
@@ -38,7 +38,7 @@ export default {
         }
     },
     methods: {
-        interpret(response) {
+        interpretSpotifyResponse(response) {
             const items = response.items;
             items.forEach(item => {
                 item.track.artists.forEach(artist => {
@@ -55,8 +55,10 @@ export default {
             }, {});
             return uniqs;
         },
-        test() {
-            const accessToken = console.log(import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN);
+        getSpotifyTracks() {
+            const accessToken = import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN;
+            const client_id = 'c6ead95860334243aabf554648943aa7';
+            const redirect_uri = 'http://localhost:5173/callback';
 
             let offset = 0;
             // while (offset < 50) {
@@ -68,7 +70,7 @@ export default {
                 },
             })
                 .then(response => response.json())
-                .then(response => this.interpret(response))
+                .then(response => this.interpretSpotifyResponse(response))
                 .catch(err => console.error(err));
             offset += 50;
             // }
