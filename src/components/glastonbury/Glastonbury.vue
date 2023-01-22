@@ -57,6 +57,7 @@ export default {
 
                         if (xhr.status == 200) {
                             window.sessionStorage.setItem("spotifyWebAPIAccessToken", response.access_token);
+                            this.getArtistData();
                         }
                         else {
                             message = "Error: " + response.error_description + " (" + response.error + ")";
@@ -77,7 +78,11 @@ export default {
                     }));
                 }
             } 
+        },
+        getArtistData() {
             if (window.sessionStorage.getItem("spotifyWebAPIAccessToken")) {
+                console.log('below is sessions storage:')
+                console.log(window.sessionStorage.getItem("spotifyWebAPIAccessToken"))
                 const accessToken = window.sessionStorage.getItem("spotifyWebAPIAccessToken");
                 let offset = 0;
                 // while (offset < 50) {
