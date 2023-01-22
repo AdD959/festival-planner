@@ -56,7 +56,7 @@ export default {
                         var message;
 
                         if (xhr.status == 200) {
-                            message = "Access Token: " + response.access_token;
+                            window.sessionStorage.setItem("spotifyWebAPIAccessToken", response.access_token);
                         }
                         else {
                             message = "Error: " + response.error_description + " (" + response.error + ")";
@@ -76,6 +76,23 @@ export default {
                         code: code
                     }));
                 }
+            } 
+            if (window.sessionStorage.getItem("spotifyWebAPIAccessToken")) {
+                const accessToken = window.sessionStorage.getItem("spotifyWebAPIAccessToken");
+                let offset = 0;
+                // while (offset < 50) {
+                fetch(`https://api.spotify.com/v1/me/tracks?limit=50&offset=${offset}`, {
+                    method: 'GET',
+                    headers: {
+                        "Content-Type": 'application/json',
+                        'Authorization': `Bearer ${accessToken}`,
+                    },
+                })
+                    .then(response => response.json())
+                    .then(response => this.interpret(response))
+                    .catch(err => console.error(err));
+                offset += 50;
+                // }
             }
         },
         auth() {
@@ -92,20 +109,22 @@ export default {
                     }
                 })
                 .then(function(codeChallenge) {
-                    window.sessionStorage.setItem("code_verifier", codeVerifier);
-
+                    
                     var redirectUri = 'http://127.0.0.1:5173/callback';
                     var args = new URLSearchParams({
                         response_type: "code",
                         client_id: 'c6ead95860334243aabf554648943aa7',
                         code_challenge_method: challengeMethod,
                         code_challenge: codeChallenge,
-                        redirect_uri: redirectUri
+                        redirect_uri: redirectUri,
+                        scope: 'user-library-read'
                     });
-                window.location = 'https://accounts.spotify.com/authorize?' + args;
-            });
+                    window.sessionStorage.setItem("code_verifier", codeVerifier);
+                    window.location = 'https://accounts.spotify.com/authorize?' + args;
+                });
         },
         interpret(response) {
+            console.log(response)
             const items = response.items;
             items.forEach(item => {
                 item.track.artists.forEach(artist => {
