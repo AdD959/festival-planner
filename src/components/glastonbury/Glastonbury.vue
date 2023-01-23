@@ -54,7 +54,15 @@ export default {
     },
     methods: {
         init() {
-            console.log(file);
+            fetch("glastonbury2022.json").then(res => res.json()).then(artists => { 
+                artists.forEach(artist => console.log(artist.Day))
+                this.results = artists;
+                this.checkAuth();
+            });
+        },
+        checkAuth() {
+            const accessToken = window.sessionStorage.getItem("spotifyWebAPIAccessToken");
+            if (accessToken) { return; }
             if (window.location.search) {
             var args = new URLSearchParams(window.location.search);
             var code = args.get("code");
