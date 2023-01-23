@@ -2,9 +2,13 @@
     <div class="w-full flex flex-col items-center">
         <div class="max-w-6xl bg-slate-200 w-full relative flex flex-col items-center rounded-xl p-5 pt-10">
             <h2 class="text-5xl mb-5">Glastonbury Festival</h2>
-            <span class="rounded-full bg-green-700 text-white font-bold absolute top-10 right-10 py-4 px-6"
-                @click="getSpotifyTracks()">S</span>
+            <!-- <a v-bind:href="auth()"> -->
+
+                <span @click="auth()" class="rounded-full bg-green-700 text-white font-bold absolute top-10 right-10 py-4 px-6"
+                    >S</span>
+            <!-- </a> -->
             <section class="bg-white rounded-lg w-full p-5">
+                <div id="result"></div>
                 <div id="pyramid" class="flex w-full">
                     <h3 class="text-2xl mr-10">Pyramid</h3>
                     <div class="flex bg-gray-400 p-5 rounded-md">
@@ -30,15 +34,102 @@
 </template>
 
 <script>
+import cryptoRandomString from 'crypto-random-string'
 export default {
     data() {
         return {
             artists: [],
-            results: {}
+            results: {},
         }
     },
     methods: {
-        interpretSpotifyResponse(response) {
+        init() {
+            if (window.location.search) {
+            var args = new URLSearchParams(window.location.search);
+            var code = args.get("code");
+
+                if (code) {
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.onload = function() {
+                        var response = xhr.response;
+                        var message;
+
+                        if (xhr.status == 200) {
+                            window.sessionStorage.setItem("spotifyWebAPIAccessToken", response.access_token);
+                            this.getArtistData();
+                        }
+                        else {
+                            message = "Error: " + response.error_description + " (" + response.error + ")";
+                        }
+
+                        console.log(response)
+                        document.getElementById("result").innerHTML = message;
+                    };
+                    xhr.responseType = 'json';
+                    xhr.open("POST", 'https://accounts.spotify.com/api/token', true);
+                    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                    xhr.send(new URLSearchParams({
+                        client_id: 'c6ead95860334243aabf554648943aa7',
+                        code_verifier: window.sessionStorage.getItem("code_verifier"),
+                        grant_type: "authorization_code",
+                        redirect_uri: location.href.replace(location.search, ''),
+                        code: code
+                    }));
+                }
+            } 
+        },
+        getArtistData() {
+            if (window.sessionStorage.getItem("spotifyWebAPIAccessToken")) {
+                console.log('below is sessions storage:')
+                console.log(window.sessionStorage.getItem("spotifyWebAPIAccessToken"))
+                const accessToken = window.sessionStorage.getItem("spotifyWebAPIAccessToken");
+                let offset = 0;
+                // while (offset < 50) {
+                fetch(`https://api.spotify.com/v1/me/tracks?limit=50&offset=${offset}`, {
+                    method: 'GET',
+                    headers: {
+                        "Content-Type": 'application/json',
+                        'Authorization': `Bearer ${accessToken}`,
+                    },
+                })
+                    .then(response => response.json())
+                    .then(response => this.interpret(response))
+                    .catch(err => console.error(err));
+                offset += 50;
+                // }
+            }
+        },
+        auth() {
+            var codeVerifier = this.generateRandomString(64);
+
+            const challengeMethod = crypto.subtle ? "S256" : "plain"
+
+            Promise.resolve()
+                .then(() => {
+                    if (challengeMethod === 'S256') {
+                        return this.generateCodeChallenge(codeVerifier)
+                    } else {
+                        return codeVerifier
+                    }
+                })
+                .then(function(codeChallenge) {
+                    
+                    var redirectUri = 'http://127.0.0.1:5173/callback';
+                    var args = new URLSearchParams({
+                        response_type: "code",
+                        client_id: 'c6ead95860334243aabf554648943aa7',
+                        code_challenge_method: challengeMethod,
+                        code_challenge: codeChallenge,
+                        redirect_uri: redirectUri,
+                        scope: 'user-library-read'
+                    });
+                    window.sessionStorage.setItem("code_verifier", codeVerifier);
+                    window.location = 'https://accounts.spotify.com/authorize?' + args;
+                });
+        },
+        interpret(response) {
+            console.log(response)
             const items = response.items;
             items.forEach(item => {
                 item.track.artists.forEach(artist => {
@@ -46,7 +137,6 @@ export default {
                 });
             });
             this.$data.results = this.countUnique(this.$data.artists);
-            console.log(this.$data.results);
         },
         countUnique(arr) {
             var uniqs = arr.reduce((acc, val) => {
@@ -55,27 +145,26 @@ export default {
             }, {});
             return uniqs;
         },
-        getSpotifyTracks() {
-            const accessToken = import.meta.env.VITE_SPOTIFY_ACCESS_TOKEN;
-            const client_id = 'c6ead95860334243aabf554648943aa7';
-            const redirect_uri = 'http://localhost:5173/callback';
+        async generateCodeChallenge(codeVerifier) {
+            var digest = await crypto.subtle.digest("SHA-256",
+                new TextEncoder().encode(codeVerifier));
 
-            let offset = 0;
-            // while (offset < 50) {
-            fetch(`https://api.spotify.com/v1/me/tracks?limit=50&offset=${offset}`, {
-                method: 'GET',
-                headers: {
-                    "Content-Type": 'application/json',
-                    'Authorization': `Bearer ${accessToken}`,
-                },
-            })
-                .then(response => response.json())
-                .then(response => this.interpretSpotifyResponse(response))
-                .catch(err => console.error(err));
-            offset += 50;
-            // }
-
+            return btoa(String.fromCharCode(...new Uint8Array(digest)))
+                .replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_')
         },
+        generateRandomString(length) {
+            var text = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (var i = 0; i < length; i++) {
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            }
+
+            return text;
+        }
+    },
+    beforeMount() {
+        this.init();
     }
 }
 </script>
