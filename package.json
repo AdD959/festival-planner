@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "crypto-random-string": "^5.0.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {

@@ -33,8 +33,18 @@
     </div>
 </template>
 
+<script setup>
+import { onMounted } from "vue";
+
+onMounted(async () => {
+  const response = await fetch("glastonbury2022.json");
+  const file = await response.json();
+});
+
+</script>
+
 <script>
-import cryptoRandomString from 'crypto-random-string'
+
 export default {
     data() {
         return {
@@ -44,6 +54,7 @@ export default {
     },
     methods: {
         init() {
+            console.log(file);
             if (window.location.search) {
             var args = new URLSearchParams(window.location.search);
             var code = args.get("code");
