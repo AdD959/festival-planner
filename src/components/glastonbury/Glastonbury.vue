@@ -12,19 +12,8 @@
                 <div id="pyramid" class="flex w-full">
                     <h3 class="text-2xl mr-10">Pyramid</h3>
                     <div class="flex bg-gray-400 p-5 rounded-md">
-                        <div v-for="(count, artist) in results">
-                            <div v-if="count == 0">
-                                <div class="h-[150px] bg-white border-gray-300 px-5 rounded-md border-2">{{ artist }}</div>
-                            </div>
-                            <div v-if="count == 1">
-                                <div class="h-[150px] bg-green-100 border-gray-300 px-5 rounded-md border-2">{{ artist }}</div>
-                            </div>
-                            <div v-if="count == 2">
-                                <div class="h-[150px] bg-green-300 border-gray-300 px-5 rounded-md border-2">{{ artist }}</div>
-                            </div>
-                            <div v-if="count > 2">
-                                <div class="h-[150px] bg-green-500 border-gray-300 px-5 rounded-md border-2">{{ artist }}</div>
-                            </div>
+                        <div v-for="(name) in results">
+                                <div class="h-[150px] bg-white border-gray-300 px-5 rounded-md border-2">{{ count.Name }}</div>
                         </div>
                     </div>
                 </div>
@@ -46,6 +35,12 @@ onMounted(async () => {
 <script>
 
 export default {
+    mounted() {
+        fetch("glastonbury2022.json").then(res => res.json()).then(artists => { 
+            this.results = artists;
+            this.init();
+        });
+    },
     data() {
         return {
             artists: [],
@@ -53,12 +48,10 @@ export default {
         }
     },
     methods: {
-        init() {
-            fetch("glastonbury2022.json").then(res => res.json()).then(artists => { 
-                artists.forEach(artist => console.log(artist.Day))
-                this.results = artists;
-                this.checkAuth();
-            });
+        init() {;
+            this.results = JSON.parse(JSON.stringify(this.results))
+            console.log(this.results);
+            this.checkAuth()
         },
         checkAuth() {
             const accessToken = window.sessionStorage.getItem("spotifyWebAPIAccessToken");
@@ -182,8 +175,5 @@ export default {
             return text;
         }
     },
-    beforeMount() {
-        this.init();
-    }
 }
 </script>
