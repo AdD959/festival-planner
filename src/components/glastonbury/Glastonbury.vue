@@ -11,9 +11,13 @@
                 <div id="result"></div>
                 <div id="pyramid" class="flex w-full">
                     <h3 class="text-2xl mr-10">Pyramid</h3>
-                    <div class="flex bg-gray-400 p-5 rounded-md">
-                        <div v-for="(name) in results">
-                                <div class="h-[150px] bg-white border-gray-300 px-5 rounded-md border-2">{{ count.Name }}</div>
+                    <div class="flex flex-col bg-gray-400 p-5 rounded-md" v-for="day in results">
+                        <div class="flex flex-col">
+                            <div>{{ day.Name }}</div>
+                            <div v-for="stage in day.Stages" class="flex">
+                                <div>{{ stage.Name }}</div>
+                                <div v-for="artist in stage.Artists" class="h-[150px] bg-white border-gray-300 px-5 rounded-md border-2">{{ artist.Name }}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -21,16 +25,6 @@
         </div>
     </div>
 </template>
-
-<script setup>
-import { onMounted } from "vue";
-
-onMounted(async () => {
-  const response = await fetch("glastonbury2022.json");
-  const file = await response.json();
-});
-
-</script>
 
 <script>
 

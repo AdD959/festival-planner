@@ -1,914 +1,868 @@
 [
   {
-    "Day": "Friday",
-    "Name": "BILLIE EILISH",
-    "Time": "22:15 - 23:45",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "SAM FENDER",
-    "Time": "20:15 - 21:15",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "ROBERT PLANT & ALISON KRAUSS",
-    "Time": "18:15 - 19:15",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "WOLF ALICE",
-    "Time": "16:45 - 17:45",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "CROWDED HOUSE",
-    "Time": "15:15 - 16:15",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "RUFUS WAINWRIGHT",
-    "Time": "13:45 - 14:45",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "ZIGGY MARLEY",
-    "Time": "12:15 - 13:15",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "FOALS",
-    "Time": "22:30 - 23:45",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "ST. VINCENT",
-    "Time": "20:30 - 21:30",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "IDLES",
-    "Time": "18:45 - 19:45",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "SUPERGRASS",
-    "Time": "17:15 - 18:15",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "FIRST AID KIT",
-    "Time": "15:45 - 16:45",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "BLOSSOMS",
-    "Time": "14:15 - 15:15",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "KAE TEMPEST",
-    "Time": "13:00 - 13:45",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "THE LIBERTINES",
-    "Time": "11:30 - 12:30",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "LITTLE SIMZ",
-    "Time": "22:15 - 23:45",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "BONOBO",
-    "Time": "20:30 - 21:30",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "SEUN KUTI & EGYPT 80",
-    "Time": "19:00 - 20:00",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "TLC",
-    "Time": "17:30 - 18:30",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "SLEAFORD MODS",
-    "Time": "16:00 - 17:00",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "GREENTEA PENG",
-    "Time": "14:30 - 15:30",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "AROOJ AFTAB",
-    "Time": "13:00 - 14:00",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "NUBIYAN TWIST",
-    "Time": "11:30 - 12:30",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "PRIMAL SCREAM",
-    "Time": "22:30 - 23:45",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "THE JESUS AND MARY CHAIN",
-    "Time": "21:00 - 22:00",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "PHOEBE BRIDGERS",
-    "Time": "19:30 - 20:30",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "SIGRID",
-    "Time": "18:00 - 19:00",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "GIRL IN RED",
-    "Time": "16:30 - 17:30",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "INHALER",
-    "Time": "15:15 - 16:00",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "GRIFF",
-    "Time": "14:00 - 14:45",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "BAD BOY CHILLER CREW",
-    "Time": "12:45 - 13:30",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "ENGLISH TEACHER",
-    "Time": "11:30 - 12:15",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "FOUR TET",
-    "Time": "23:00 - 00:15",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "KHRUANGBIN",
-    "Time": "21:15 - 22:15",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "SAINT ETIENNE",
-    "Time": "19:45 - 20:45",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "ARLO PARKS",
-    "Time": "18:15 - 19:15",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "DRY CLEANING",
-    "Time": "16:45 - 17:45",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "CONFIDENCE MAN",
-    "Time": "15:15 - 16:15",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "WET LEG",
-    "Time": "14:00 - 14:45",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "ORLANDO WEEKS",
-    "Time": "12:45 - 13:30",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "MATILDA MANN",
-    "Time": "11:30 - 12:10",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "PAUL HEATON & JACQUI ABBOTT",
-    "Time": "21:30 - 23:00",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "THE UNDERTONES",
-    "Time": "20:00 - 21:00",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "HOTHOUSE FLOWERS",
-    "Time": "18:30 - 19:30",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "BRIAN KENNEDY",
-    "Time": "17:25 - 18:10",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "MARY COUGHLAN",
-    "Time": "16:25 - 17:05",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "THE MARIACHIS",
-    "Time": "15:30 - 16:10",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "IRISH MYTHEN",
-    "Time": "14:30 - 15:10",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "PAVEY ARK",
-    "Time": "13:40 - 14:20",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "ROSEANNE REID",
-    "Time": "12:45 - 13:25",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Friday",
-    "Name": "NOVELTY ISLAND",
-    "Time": "12:00 - 12:30",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "PAUL MCCARTNEY",
-    "Time": "21:30 - 23:45",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "NOEL GALLAGHER'S HIGH FLYING BIRDS",
-    "Time": "19:15 - 20:30",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "HAIM",
-    "Time": "17:30 - 18:30",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "GRETA THUNBERG",
-    "Time": "17:15 - 17:25",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "AJ TRACEY",
-    "Time": "16:00 - 16:45",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "EASY LIFE",
-    "Time": "14:30 - 15:30",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "JOY CROOKES",
-    "Time": "13:15 - 14:00",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "LES AMAZONES D'AFRIQUE",
-    "Time": "12:00 - 12:45",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "MEGAN THEE STALLION",
-    "Time": "22:30 - 23:30",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "BURNA BOY",
-    "Time": "20:30 - 21:30",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "OLIVIA RODRIGO",
-    "Time": "18:45 - 19:45",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "GLASS ANIMALS",
-    "Time": "17:15 - 18:15",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "METRONOMY",
-    "Time": "15:45 - 16:45",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "SKUNK ANANSIE",
-    "Time": "14:15 - 15:15",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "TEMS",
-    "Time": "13:00 - 13:45",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "HAK BAKER",
-    "Time": "11:45 - 12:30",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "ROISIN MURPHY",
-    "Time": "22:15 - 23:45",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "CARIBOU",
-    "Time": "20:30 - 21:30",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "LEON BRIDGES",
-    "Time": "19:00 - 20:00",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "CELESTE",
-    "Time": "17:30 - 18:30",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "YVES TUMOR",
-    "Time": "16:00 - 17:00",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "BLACK MIDI",
-    "Time": "14:30 - 15:30",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "BRASS AGAINST",
-    "Time": "13:00 - 14:00",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "KIKAGAKU MOYO",
-    "Time": "11:30 - 12:30",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "JAMIE T",
-    "Time": "22:30 - 23:45",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "YUNGBLUD",
-    "Time": "21:00 - 22:00",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "GHETTS",
-    "Time": "19:30 - 20:30",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "PA SALIEU",
-    "Time": "18:00 - 19:00",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "BEABADOOBEE",
-    "Time": "16:30 - 17:30",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "SELF ESTEEM",
-    "Time": "15:15 - 16:00",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "HOLLY HUMBERSTONE",
-    "Time": "14:00 - 14:45",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "ENNY",
-    "Time": "12:45 - 13:30",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "GO_A",
-    "Time": "11:30 - 12:15",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "JESSIE WARE",
-    "Time": "23:00 - 00:15",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "MITSKI",
-    "Time": "21:15 - 22:15",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "THE AVALANCHES",
-    "Time": "19:45 - 20:45",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "BIG THIEF",
-    "Time": "18:15 - 19:15",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "SQUID",
-    "Time": "16:45 - 17:45",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "SAMPA THE GREAT",
-    "Time": "15:15 - 16:15",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "GABRIELS",
-    "Time": "14:00 - 14:45",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "KATY J PEARSON",
-    "Time": "12:45 - 13:30",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "YASMIN WILLIAMS",
-    "Time": "11:30 - 12:10",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "THE WATERBOYS",
-    "Time": "21:30 - 23:00",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "RALPH MCTELL",
-    "Time": "20:00 - 21:00",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "SCOUTING FOR GIRLS",
-    "Time": "18:30 - 19:30",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "TONY CHRISTIE",
-    "Time": "17:30 - 18:15",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "CHRIS DIFFORD",
-    "Time": "16:30 - 17:15",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "GRAINNE DUFFY",
-    "Time": "15:30 - 16:15",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "LAURA VEIRS",
-    "Time": "14:30 - 15:10",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "KATHERINE PRIDDY",
-    "Time": "13:40 - 14:20",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "49TH & MAIN",
-    "Time": "12:45 - 13:25",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Saturday",
-    "Name": "TOM WEBBER BEST DEMO OF THE YEAR",
-    "Time": "12:00 - 12:30",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "KENDRICK LAMAR",
-    "Time": "21:45 - 23:15",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "LORDE",
-    "Time": "19:30 - 20:45",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "ELBOW",
-    "Time": "17:45 - 18:45",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "DIANA ROSS",
-    "Time": "16:00 - 17:15",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "HERBIE HANCOCK",
-    "Time": "14:00 - 15:00",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "DAKHABRAKHA",
-    "Time": "12:45 - 13:30",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "BLACK DYKE BAND",
-    "Time": "11:30 - 12:15",
-    "Stage": "PYRAMID STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "PET SHOP BOYS",
-    "Time": "21:40 - 23:15",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "YEARS & YEARS",
-    "Time": "19:45 - 20:45",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "KACEY MUSGRAVES",
-    "Time": "18:00 - 19:00",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "FONTAINES DC",
-    "Time": "16:30 - 17:30",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "DECLAN MCKENNA",
-    "Time": "15:00 - 16:00",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "LIANNE LA HAVAS",
-    "Time": "13:30 - 14:30",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "SEA GIRLS",
-    "Time": "12:15 - 13:00",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "KOJEY RADICAL",
-    "Time": "11:00 - 11:45",
-    "Stage": "OTHER STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "BICEP",
-    "Time": "21:45 - 23:15",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "ANGELIQUE KIDJO",
-    "Time": "20:00 - 21:00",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "KOFFEE",
-    "Time": "18:30 - 19:30",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "SNARKY PUPPY",
-    "Time": "17:00 - 18:00",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "NUBYA GARCIA",
-    "Time": "15:30 - 16:30",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "NIGHTMARES ON WAX",
-    "Time": "14:00 - 15:00",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "EMMA-JEAN THACKRAY",
-    "Time": "12:30 - 13:30",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "ISHMAEL ENSEMBLE",
-    "Time": "11:00 - 12:00",
-    "Stage": "WEST HOLTS STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "CHARLI XCX",
-    "Time": "21:30 - 22:45",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "LITTLE DRAGON",
-    "Time": "20:00 - 21:00",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "TURNSTILE",
-    "Time": "18:30 - 19:30",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "AMYL AND THE SNIFFERS",
-    "Time": "17:00 - 18:00",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "CLAIRO",
-    "Time": "15:30 - 16:30",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "GEORGE EZRA",
-    "Time": "14:00 - 15:00",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "SPORTS TEAM",
-    "Time": "12:30 - 13:30",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "JUST MUSTARD",
-    "Time": "11:15 - 12:00",
-    "Stage": "JOHN PEEL STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "COURTNEY BARNETT",
-    "Time": "21:15 - 22:30",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "JARV IS",
-    "Time": "19:45 - 20:45",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "JACK WHITE",
-    "Time": "18:15 - 19:15",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "CAROLINE POLACHEK",
-    "Time": "16:30 - 17:30",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "CATE LE BON",
-    "Time": "15:15 - 16:00",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "WARMDUSCHER",
-    "Time": "14:00 - 14:45",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "BIG JOANIE",
-    "Time": "12:45 - 13:30",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "DEEP THROAT CHOIR",
-    "Time": "11:30 - 12:15",
-    "Stage": "THE PARK STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "SUZANNE VEGA",
-    "Time": "21:30 - 23:00",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "THE SHIRES",
-    "Time": "20:00 - 21:00",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "THE BOOTLEG BEATLES",
-    "Time": "18:30 - 19:30",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "FISHERMAN'S FRIENDS",
-    "Time": "17:30 - 18:15",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "GLENN TILBROOK",
-    "Time": "16:30 - 17:15",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "DAMIEN DEMPSEY",
-    "Time": "15:30 - 16:15",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "ERROL LINTON",
-    "Time": "14:30 - 15:10",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "CHLOE FOY",
-    "Time": "13:40 - 14:20",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "LEWIS MCLAUGHLIN EMERGING TALENT COMPETITION WINNER",
-    "Time": "12:45 - 13:25",
-    "Stage": "ACOUSTIC STAGE"
-  },
-  {
-    "Day": "Sunday",
-    "Name": "MEGAN MCKENNA",
-    "Time": "12:00 - 12:30",
-    "Stage": "ACOUSTIC STAGE"
+    "Name": "Friday",
+    "Stages": [
+      { 
+        "Name":"PYRAMID STAGE",
+        "Artists": [
+          {
+            "Name": "BILLIE EILISH",
+            "Time": "22:15 - 23:45",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "SAM FENDER",
+            "Time": "20:15 - 21:15",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "ROBERT PLANT & ALISON KRAUSS",
+            "Time": "18:15 - 19:15",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "WOLF ALICE",
+            "Time": "16:45 - 17:45",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "CROWDED HOUSE",
+            "Time": "15:15 - 16:15",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "RUFUS WAINWRIGHT",
+            "Time": "13:45 - 14:45",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "ZIGGY MARLEY",
+            "Time": "12:15 - 13:15",
+            "Stage": "PYRAMID STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"OTHER STAGE",
+        "Artists": [
+          {
+            "Name": "FOALS",
+            "Time": "22:30 - 23:45",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "ST. VINCENT",
+            "Time": "20:30 - 21:30",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "IDLES",
+            "Time": "18:45 - 19:45",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "SUPERGRASS",
+            "Time": "17:15 - 18:15",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "FIRST AID KIT",
+            "Time": "15:45 - 16:45",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "BLOSSOMS",
+            "Time": "14:15 - 15:15",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "KAE TEMPEST",
+            "Time": "13:00 - 13:45",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "THE LIBERTINES",
+            "Time": "11:30 - 12:30",
+            "Stage": "OTHER STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"WEST HOLTS STAGE",
+        "Artists": [
+          {
+            "Name": "LITTLE SIMZ",
+            "Time": "22:15 - 23:45",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "BONOBO",
+            "Time": "20:30 - 21:30",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "SEUN KUTI & EGYPT 80",
+            "Time": "19:00 - 20:00",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "TLC",
+            "Time": "17:30 - 18:30",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "SLEAFORD MODS",
+            "Time": "16:00 - 17:00",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "GREENTEA PENG",
+            "Time": "14:30 - 15:30",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "AROOJ AFTAB",
+            "Time": "13:00 - 14:00",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "NUBIYAN TWIST",
+            "Time": "11:30 - 12:30",
+            "Stage": "WEST HOLTS STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"JOHN PEEL STAGE",
+        "Artists": [
+          {
+            "Name": "PRIMAL SCREAM",
+            "Time": "22:30 - 23:45",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "THE JESUS AND MARY CHAIN",
+            "Time": "21:00 - 22:00",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "PHOEBE BRIDGERS",
+            "Time": "19:30 - 20:30",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "SIGRID",
+            "Time": "18:00 - 19:00",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "GIRL IN RED",
+            "Time": "16:30 - 17:30",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "INHALER",
+            "Time": "15:15 - 16:00",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "GRIFF",
+            "Time": "14:00 - 14:45",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "BAD BOY CHILLER CREW",
+            "Time": "12:45 - 13:30",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "ENGLISH TEACHER",
+            "Time": "11:30 - 12:15",
+            "Stage": "JOHN PEEL STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"THE PARK STAGE",
+        "Artists": [
+
+          {
+            "Name": "FOUR TET",
+            "Time": "23:00 - 00:15",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "KHRUANGBIN",
+            "Time": "21:15 - 22:15",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "SAINT ETIENNE",
+            "Time": "19:45 - 20:45",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "ARLO PARKS",
+            "Time": "18:15 - 19:15",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "DRY CLEANING",
+            "Time": "16:45 - 17:45",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "CONFIDENCE MAN",
+            "Time": "15:15 - 16:15",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "WET LEG",
+            "Time": "14:00 - 14:45",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "ORLANDO WEEKS",
+            "Time": "12:45 - 13:30",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "MATILDA MANN",
+            "Time": "11:30 - 12:10",
+            "Stage": "THE PARK STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"ACOUSTIC STAGE",
+        "Artists": [
+          {
+            "Name": "PAUL HEATON & JACQUI ABBOTT",
+            "Time": "21:30 - 23:00",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "THE UNDERTONES",
+            "Time": "20:00 - 21:00",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "HOTHOUSE FLOWERS",
+            "Time": "18:30 - 19:30",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "BRIAN KENNEDY",
+            "Time": "17:25 - 18:10",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "MARY COUGHLAN",
+            "Time": "16:25 - 17:05",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "THE MARIACHIS",
+            "Time": "15:30 - 16:10",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "IRISH MYTHEN",
+            "Time": "14:30 - 15:10",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "PAVEY ARK",
+            "Time": "13:40 - 14:20",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "ROSEANNE REID",
+            "Time": "12:45 - 13:25",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "NOVELTY ISLAND",
+            "Time": "12:00 - 12:30",
+            "Stage": "ACOUSTIC STAGE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "Saturday",
+    "Stages": [
+      { 
+        "Name":"PYRAMID STAGE",
+        "Artists": [
+          {
+            "Name": "PAUL MCCARTNEY",
+            "Time": "21:30 - 23:45",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "NOEL GALLAGHER'S HIGH FLYING BIRDS",
+            "Time": "19:15 - 20:30",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "HAIM",
+            "Time": "17:30 - 18:30",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "GRETA THUNBERG",
+            "Time": "17:15 - 17:25",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "AJ TRACEY",
+            "Time": "16:00 - 16:45",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "EASY LIFE",
+            "Time": "14:30 - 15:30",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "JOY CROOKES",
+            "Time": "13:15 - 14:00",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "LES AMAZONES D'AFRIQUE",
+            "Time": "12:00 - 12:45",
+            "Stage": "PYRAMID STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"OTHER STAGE",
+        "Artists": [
+          {
+            "Name": "MEGAN THEE STALLION",
+            "Time": "22:30 - 23:30",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "BURNA BOY",
+            "Time": "20:30 - 21:30",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "OLIVIA RODRIGO",
+            "Time": "18:45 - 19:45",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "GLASS ANIMALS",
+            "Time": "17:15 - 18:15",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "METRONOMY",
+            "Time": "15:45 - 16:45",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "SKUNK ANANSIE",
+            "Time": "14:15 - 15:15",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "TEMS",
+            "Time": "13:00 - 13:45",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "HAK BAKER",
+            "Time": "11:45 - 12:30",
+            "Stage": "OTHER STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"WEST HOLTS STAGE",
+        "Artists": [
+          {
+            "Name": "ROISIN MURPHY",
+            "Time": "22:15 - 23:45",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "CARIBOU",
+            "Time": "20:30 - 21:30",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "LEON BRIDGES",
+            "Time": "19:00 - 20:00",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "CELESTE",
+            "Time": "17:30 - 18:30",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "YVES TUMOR",
+            "Time": "16:00 - 17:00",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "BLACK MIDI",
+            "Time": "14:30 - 15:30",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "BRASS AGAINST",
+            "Time": "13:00 - 14:00",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "KIKAGAKU MOYO",
+            "Time": "11:30 - 12:30",
+            "Stage": "WEST HOLTS STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"JOHN PEEL STAGE",
+        "Artists": [
+          {
+            "Name": "JAMIE T",
+            "Time": "22:30 - 23:45",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "YUNGBLUD",
+            "Time": "21:00 - 22:00",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "GHETTS",
+            "Time": "19:30 - 20:30",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "PA SALIEU",
+            "Time": "18:00 - 19:00",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "BEABADOOBEE",
+            "Time": "16:30 - 17:30",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "SELF ESTEEM",
+            "Time": "15:15 - 16:00",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "HOLLY HUMBERSTONE",
+            "Time": "14:00 - 14:45",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "ENNY",
+            "Time": "12:45 - 13:30",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "GO_A",
+            "Time": "11:30 - 12:15",
+            "Stage": "JOHN PEEL STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"THE PARK STAGE",
+        "Artists": [
+          {
+            "Name": "JESSIE WARE",
+            "Time": "23:00 - 00:15",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "MITSKI",
+            "Time": "21:15 - 22:15",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "THE AVALANCHES",
+            "Time": "19:45 - 20:45",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "BIG THIEF",
+            "Time": "18:15 - 19:15",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "SQUID",
+            "Time": "16:45 - 17:45",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "SAMPA THE GREAT",
+            "Time": "15:15 - 16:15",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "GABRIELS",
+            "Time": "14:00 - 14:45",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "KATY J PEARSON",
+            "Time": "12:45 - 13:30",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "YASMIN WILLIAMS",
+            "Time": "11:30 - 12:10",
+            "Stage": "THE PARK STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"ACOUSTIC STAGE",
+        "Artists": [
+          {
+            "Name": "THE WATERBOYS",
+            "Time": "21:30 - 23:00",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "RALPH MCTELL",
+            "Time": "20:00 - 21:00",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "SCOUTING FOR GIRLS",
+            "Time": "18:30 - 19:30",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "TONY CHRISTIE",
+            "Time": "17:30 - 18:15",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "CHRIS DIFFORD",
+            "Time": "16:30 - 17:15",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "GRAINNE DUFFY",
+            "Time": "15:30 - 16:15",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "LAURA VEIRS",
+            "Time": "14:30 - 15:10",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "KATHERINE PRIDDY",
+            "Time": "13:40 - 14:20",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "49TH & MAIN",
+            "Time": "12:45 - 13:25",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "TOM WEBBER BEST DEMO OF THE YEAR",
+            "Time": "12:00 - 12:30",
+            "Stage": "ACOUSTIC STAGE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "Sunday",
+    "Stages": [
+      { 
+        "Name":"PYRAMID STAGE",
+        "Artists": [
+          {
+            "Name": "KENDRICK LAMAR",
+            "Time": "21:45 - 23:15",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "LORDE",
+            "Time": "19:30 - 20:45",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "ELBOW",
+            "Time": "17:45 - 18:45",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "DIANA ROSS",
+            "Time": "16:00 - 17:15",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "HERBIE HANCOCK",
+            "Time": "14:00 - 15:00",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "DAKHABRAKHA",
+            "Time": "12:45 - 13:30",
+            "Stage": "PYRAMID STAGE"
+          },
+          {
+            "Name": "BLACK DYKE BAND",
+            "Time": "11:30 - 12:15",
+            "Stage": "PYRAMID STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"OTHER STAGE",
+        "Artists": [
+          {
+            "Name": "PET SHOP BOYS",
+            "Time": "21:40 - 23:15",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "YEARS & YEARS",
+            "Time": "19:45 - 20:45",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "KACEY MUSGRAVES",
+            "Time": "18:00 - 19:00",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "FONTAINES DC",
+            "Time": "16:30 - 17:30",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "DECLAN MCKENNA",
+            "Time": "15:00 - 16:00",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "LIANNE LA HAVAS",
+            "Time": "13:30 - 14:30",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "SEA GIRLS",
+            "Time": "12:15 - 13:00",
+            "Stage": "OTHER STAGE"
+          },
+          {
+            "Name": "KOJEY RADICAL",
+            "Time": "11:00 - 11:45",
+            "Stage": "OTHER STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"WEST HOLTS STAGE",
+        "Artists": [
+          {
+            "Name": "BICEP",
+            "Time": "21:45 - 23:15",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "ANGELIQUE KIDJO",
+            "Time": "20:00 - 21:00",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "KOFFEE",
+            "Time": "18:30 - 19:30",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "SNARKY PUPPY",
+            "Time": "17:00 - 18:00",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "NUBYA GARCIA",
+            "Time": "15:30 - 16:30",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "NIGHTMARES ON WAX",
+            "Time": "14:00 - 15:00",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "EMMA-JEAN THACKRAY",
+            "Time": "12:30 - 13:30",
+            "Stage": "WEST HOLTS STAGE"
+          },
+          {
+            "Name": "ISHMAEL ENSEMBLE",
+            "Time": "11:00 - 12:00",
+            "Stage": "WEST HOLTS STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"JOHN PEEL STAGE",
+        "Artists": [
+          {
+            "Name": "CHARLI XCX",
+            "Time": "21:30 - 22:45",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "LITTLE DRAGON",
+            "Time": "20:00 - 21:00",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "TURNSTILE",
+            "Time": "18:30 - 19:30",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "AMYL AND THE SNIFFERS",
+            "Time": "17:00 - 18:00",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "CLAIRO",
+            "Time": "15:30 - 16:30",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "GEORGE EZRA",
+            "Time": "14:00 - 15:00",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "SPORTS TEAM",
+            "Time": "12:30 - 13:30",
+            "Stage": "JOHN PEEL STAGE"
+          },
+          {
+            "Name": "JUST MUSTARD",
+            "Time": "11:15 - 12:00",
+            "Stage": "JOHN PEEL STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"THE PARK STAGE",
+        "Artists": [
+          {
+            "Name": "COURTNEY BARNETT",
+            "Time": "21:15 - 22:30",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "JARV IS",
+            "Time": "19:45 - 20:45",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "JACK WHITE",
+            "Time": "18:15 - 19:15",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "CAROLINE POLACHEK",
+            "Time": "16:30 - 17:30",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "CATE LE BON",
+            "Time": "15:15 - 16:00",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "WARMDUSCHER",
+            "Time": "14:00 - 14:45",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "BIG JOANIE",
+            "Time": "12:45 - 13:30",
+            "Stage": "THE PARK STAGE"
+          },
+          {
+            "Name": "DEEP THROAT CHOIR",
+            "Time": "11:30 - 12:15",
+            "Stage": "THE PARK STAGE"
+          }
+        ]
+      },
+      { 
+        "Name":"ACOUSTIC STAGE",
+        "Artists": [
+          {
+            "Name": "SUZANNE VEGA",
+            "Time": "21:30 - 23:00",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "THE SHIRES",
+            "Time": "20:00 - 21:00",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "THE BOOTLEG BEATLES",
+            "Time": "18:30 - 19:30",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "FISHERMAN'S FRIENDS",
+            "Time": "17:30 - 18:15",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "GLENN TILBROOK",
+            "Time": "16:30 - 17:15",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "DAMIEN DEMPSEY",
+            "Time": "15:30 - 16:15",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "ERROL LINTON",
+            "Time": "14:30 - 15:10",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "CHLOE FOY",
+            "Time": "13:40 - 14:20",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "LEWIS MCLAUGHLIN EMERGING TALENT COMPETITION WINNER",
+            "Time": "12:45 - 13:25",
+            "Stage": "ACOUSTIC STAGE"
+          },
+          {
+            "Name": "MEGAN MCKENNA",
+            "Time": "12:00 - 12:30",
+            "Stage": "ACOUSTIC STAGE"
+          }
+        ]
+      }
+    ]
   }
- ]
+]
