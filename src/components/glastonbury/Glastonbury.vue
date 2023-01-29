@@ -8,15 +8,15 @@
                     >S</span>
             <!-- </a> -->
             <section class="bg-white rounded-lg w-full p-5">
-                <div id="result"></div>
-                <div id="pyramid" class="flex w-full">
+                <div id="result">{{ results }}</div>
+                <div id="pyramid" class="flex w-full flex-col">
                     <h3 class="text-2xl mr-10">Pyramid</h3>
-                    <div class="flex flex-col bg-gray-400 p-5 rounded-md" v-for="day in results">
+                    <div class="flex flex-col bg-gray-400 p-5 rounded-md" v-for="day in lineup">
                         <div class="flex flex-col">
                             <div>{{ day.Name }}</div>
                             <div v-for="stage in day.Stages" class="flex">
                                 <div>{{ stage.Name }}</div>
-                                <div v-for="artist in stage.Artists" class="h-[150px] bg-white border-gray-300 px-5 rounded-md border-2">{{ artist.Name }}</div>
+                                <div v-for="artist in stage.Artists" class="h-[150px] border-gray-300 px-5 rounded-md border-2" :class="[artist.listens ? 'bg-green-700' : 'bg-white']">{{ artist.Name }}</div>
                             </div>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
 export default {
     mounted() {
         fetch("glastonbury2022.json").then(res => res.json()).then(artists => { 
-            this.results = artists;
+            this.lineup = artists;
             this.init();
         });
     },
@@ -39,6 +39,7 @@ export default {
         return {
             artists: [],
             results: {},
+            lineup: {}
         }
     },
     methods: {
@@ -49,8 +50,8 @@ export default {
         },
         checkAuth() {
             const accessToken = window.sessionStorage.getItem("spotifyWebAPIAccessToken");
-            if (accessToken) { return; }
-            if (window.location.search) {
+            if (accessToken) { this.getArtistData(); }
+            else if (window.location.search) {
             var args = new URLSearchParams(window.location.search);
             var code = args.get("code");
 
@@ -100,7 +101,7 @@ export default {
                     },
                 })
                     .then(response => response.json())
-                    .then(response => this.interpret(response))
+                    .then(response => { this.interpret(response); window.sessionStorage.setItem("cachedSpotifyLibrary", response); })
                     .catch(err => console.error(err));
                 offset += 50;
                 // }
@@ -135,7 +136,6 @@ export default {
                 });
         },
         interpret(response) {
-            console.log(response)
             const items = response.items;
             items.forEach(item => {
                 item.track.artists.forEach(artist => {
@@ -143,6 +143,7 @@ export default {
                 });
             });
             this.$data.results = this.countUnique(this.$data.artists);
+            this.syncToClashFinder();
         },
         countUnique(arr) {
             var uniqs = arr.reduce((acc, val) => {
@@ -151,6 +152,22 @@ export default {
             }, {});
             return uniqs;
         },
+        syncToClashFinder() {
+            //console.log(this.$data.lineup)
+
+            for (let [spotifyArtist, count] of Object.entries(this.$data.results)) {
+                for (let [index, day] of Object.entries(this.$data.lineup)) {
+                    for (let [index, stage] of Object.entries(day.Stages)) {
+                        for (let [index, artist] of Object.entries(stage.Artists)) {
+                            if (spotifyArtist.toLocaleLowerCase() == artist.Name.toLocaleLowerCase()) {
+                                console.log('match found!');
+                                artist.listens = 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }, 
         async generateCodeChallenge(codeVerifier) {
             var digest = await crypto.subtle.digest("SHA-256",
                 new TextEncoder().encode(codeVerifier));
