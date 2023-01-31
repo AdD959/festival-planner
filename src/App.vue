@@ -10,6 +10,7 @@
     <h2 class="text-sm">Choose your festival</h2>
     <!-- <Glastonbury /> -->
     <select class="p-2 bg-blue-200" v-model="selected">
+      <option value="null" disabled selected hidden>Select</option>
       <option value="glastonbury2022">Glastonbury Festival 2022</option>
       <option value="leeds2022">Leeds Festival 2022</option>
     </select>
@@ -21,7 +22,7 @@
   export default {
     data() {
       return {
-        selected: 'glastonbury2022',
+        selected: null,
       }
     }
   }
