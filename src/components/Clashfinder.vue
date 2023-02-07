@@ -1,42 +1,31 @@
 <script setup>
   // import Glastonbury from '../components/glastonbury/Glastonbury.vue'
-  import { onUpdated } from 'vue'
+  import Error from '../components/errors/Generic.vue'
 </script>
 
 <template>
-  <div v-if="setList.length !== 0">
-    {{ setList }}
+  <div v-if="error"><Error :message="error"/></div>
+  <div v-else>
+    <div class="mt-10">
+      <h2 class=" text-4xl">{{ format(festival) }}</h2>
+
+    </div>
   </div>
-  <button @click="colour = !colour" :class="colour ? 'bg-red-500' : 'bg-blue-500'">test</button>
 </template>
 
 <script>
   export default {
-    props: { festival: String },
-    data() {
-      return {
-        setList: [],
-        colour: true
-      }
-    },
+    props: { festivalData: Array, festival: String, error: String },
     methods: {
-      async getSetlist() {
-        // pt.1 read json and send to DOM
+      format(string) {
+        if (string === null) { return }
         
-        this.setList = await fetch(`${this.festival}.json`)
-        .then(response => { 
-          if (response.status === 404) {
-            return ['404']
-          }
-          return response.json() 
-        })
-        .catch(error => {
-          return ['error']
+        let words = string.split("-");
+        words.forEach((el, i) => {
+          words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
         });
-      },
-    },
-    updated() {
-      this.getSetlist()
+        return words.join(" ");
+      }
     }
   }
 </script>
