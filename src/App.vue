@@ -16,7 +16,8 @@
         <option value="leeds-2022">Leeds Festival 2022</option>
       </select>
     </div>
-    <Clashfinder :festivalData="festivalData" :festival="festival" :error="error" />
+    <!-- <Clashfinder :festivalData="festivalData" :festival="festival" :error="error" /> -->
+    <div id="visualization"></div>
   </main>
 </template>
 
@@ -32,7 +33,26 @@
     mounted() {
       //testing only
       this.festival = 'glastonbury-2022'
-      this.switchClashfinder(this.festival)
+      let promise = new Promise((resolve, reject) => {
+        // do some asynchronous work
+        // let result = this.switchClashfinder(this.festival);
+
+        this.switchClashfinder(this.festival)
+        .then(result => resolve(result))
+        .catch(err => reject(err));
+
+        // if (result) {
+        //   // if successful, resolve the Promise
+        //   console.log('success!')
+        //   resolve(result);
+        // } else {
+        //   // if unsuccessful, reject the Promise
+        //   reject(new Error('Something went wrong'));
+        //   console.log('failure...')
+        // }
+      });
+
+      promise.then(x => {console.log(x)})
     },
     methods: {
       async switchClashfinder(input) {
@@ -44,10 +64,8 @@
             this.error = `Sorry, this festival doesn't have an available clashfinder.`
             return []
           }
-          this.error = null;
-          const data = response.json()
-          this.createTable(data)
-          return data
+          this.error = null
+          return response.json()
         })
         .catch(error => {
           this.error = `Sorry, there seems to be a bug. Please report this to the developer.`
@@ -56,7 +74,7 @@
       },
       createTable(json) {
         var container = document.getElementById('visualization');
-        container.innerHTML = json;
+        console.log(json.resolve())
         // Create a DataSet (allows two way data-binding)
         var items = new vis.DataSet([
           {id: 1, order: 2, group: 1, content: 'item 1', start: '2014-04-18 10:00:00', end: '2014-04-18 11:00:00'},
