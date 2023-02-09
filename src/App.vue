@@ -45,13 +45,57 @@
             return []
           }
           this.error = null;
-          return response.json() 
+          const data = response.json()
+          this.createTable(data)
+          return data
         })
         .catch(error => {
           this.error = `Sorry, there seems to be a bug. Please report this to the developer.`
           console.log(error)
         });
       },
+      createTable(json) {
+        var container = document.getElementById('visualization');
+        container.innerHTML = json;
+        // Create a DataSet (allows two way data-binding)
+        var items = new vis.DataSet([
+          {id: 1, order: 2, group: 1, content: 'item 1', start: '2014-04-18 10:00:00', end: '2014-04-18 11:00:00'},
+          {id: 2, order: 3, group: 2, content: 'item 2', start: '2014-04-18 10:00:00', end: '2014-04-18 11:00:00'},
+          {id: 3, order: 1, group: 3, content: 'item 3', start: '2014-04-18 10:00:00', end: '2014-04-18 11:00:00'},
+          {id: 4, content: 'item 4', group: 1, start: '2014-04-18 11:15:00', end: '2014-04-18 18:00:00'},
+          {id: 5, content: 'item 5', group: 2, start: '2014-04-18 13:00:00'},
+          {id: 6, content: 'item 6', group: 2, start: '2014-04-18 14:00:00', end: '2014-04-18 15:00:00', type: 'point'},
+          {id: 7, content: 'item 6', group: 2, start: '2014-04-18 22:00:00', end: '2014-04-18 24:00:00', type: 'point'}
+        ]);
+
+        var groups = [
+          {
+            id: 1,
+            content: 'John Peel'
+            // Optional: a field 'className', 'style', 'order', [properties]
+          },
+          {
+            id: 2,
+            content: 'Pyramid'
+            // Optional: a field 'className', 'style', 'order', [properties]
+          }
+          ,
+          {
+            id: 3,
+            content: 'Other'
+            // Optional: a field 'className', 'style', 'order', [properties]
+          }
+        ]
+      
+        // Configuration for the Timeline
+        var options = {
+          min: '2014-04-18',
+          max: '2014-04-19 08:00:00',
+        };
+      
+        // Create a Timeline
+        var timeline = new vis.Timeline(container, items, groups, options);
+      }
     },
   }
 </script>
