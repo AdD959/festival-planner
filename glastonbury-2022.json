@@ -1,1019 +1,1080 @@
 [
   {
-    "Name": "Friday",
-    "Stages": [
-      { 
-        "Name":"PYRAMID STAGE",
-        "Artists": [
-          {
-            "Name": "BILLIE EILISH",
-            "Time-start": "2022-02-16 22:15:00", 
-            "Time-end": "2022-02-16 23:45:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "SAM FENDER",
-            "Time-start": "2022-02-16 20:15:00", 
-            "Time-end": "2022-02-16 21:15:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "ROBERT PLANT & ALISON KRAUSS",
-            "Time-start": "2022-02-16 18:15:00", 
-            "Time-end": "2022-02-16 19:15:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "WOLF ALICE",
-            "Time-start": "2022-02-16 16:45:00", 
-            "Time-end": "2022-02-16 17:45:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "CROWDED HOUSE",
-            "Time-start": "2022-02-16 15:15:00", 
-            "Time-end": "2022-02-16 16:15:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "RUFUS WAINWRIGHT",
-            "Time-start": "2022-02-16 13:45:00", 
-            "Time-end": "2022-02-16 14:45:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "ZIGGY MARLEY",
-            "Time-start": "2022-02-16 12:15:00", 
-            "Time-end": "2022-02-16 13:15:00",
-            "Stage": "PYRAMID STAGE"
-          }
-        ]
+    "Day": "Friday",
+    "Artists": [
+      {
+        "content": "BILLIE EILISH",
+        "start": "2022-02-16 22:15:00",
+        "end": "2022-02-16 23:45:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"OTHER STAGE",
-        "Artists": [
-          {
-            "Name": "FOALS",
-            "Time-start": "2022-02-16 22:30:00", 
-            "Time-end": "2022-02-16 23:45:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "ST. VINCENT",
-            "Time-start": "2022-02-16 20:30:00", 
-            "Time-end": "2022-02-16 21:30:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "IDLES",
-            "Time-start": "2022-02-16 18:45:00", 
-            "Time-end": "2022-02-16 19:45:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "SUPERGRASS",
-            "Time-start": "2022-02-16 17:15:00", 
-            "Time-end": "2022-02-16 18:15:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "FIRST AID KIT",
-            "Time-start": "2022-02-16 15:45:00", 
-            "Time-end": "2022-02-16 16:45:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "BLOSSOMS",
-            "Time-start": "2022-02-16 14:15:00", 
-            "Time-end": "2022-02-16 15:15:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "KAE TEMPEST",
-            "Time-start": "2022-02-16 13:00:00", 
-            "Time-end": "2022-02-16 13:45:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "THE LIBERTINES",
-            "Time-start": "2022-02-16 11:30:00", 
-            "Time-end": "2022-02-16 12:30:00",
-            "Stage": "OTHER STAGE"
-          }
-        ]
+      {
+        "content": "SAM FENDER",
+        "start": "2022-02-16 20:15:00",
+        "end": "2022-02-16 21:15:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"WEST HOLTS STAGE",
-        "Artists": [
-          {
-            "Name": "LITTLE SIMZ",
-            "Time-start": "2022-02-16 22:15:00", 
-            "Time-end": "2022-02-16 23:45:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "BONOBO",
-            "Time-start": "2022-02-16 20:30:00", 
-            "Time-end": "2022-02-16 21:30:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "SEUN KUTI & EGYPT 80",
-            "Time-start": "2022-02-16 19:00:00", 
-            "Time-end": "2022-02-16 20:00:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "TLC",
-            "Time-start": "2022-02-16 17:30:00", 
-            "Time-end": "2022-02-16 18:30:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "SLEAFORD MODS",
-            "Time-start": "2022-02-16 16:00:00", 
-            "Time-end": "2022-02-16 17:00:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "GREENTEA PENG",
-            "Time-start": "2022-02-16 14:30:00", 
-            "Time-end": "2022-02-16 15:30:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "AROOJ AFTAB",
-            "Time-start": "2022-02-16 13:00:00", 
-            "Time-end": "2022-02-16 14:00:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "NUBIYAN TWIST",
-            "Time-start": "2022-02-16 11:30:00", 
-            "Time-end": "2022-02-16 12:30:00",
-            "Stage": "WEST HOLTS STAGE"
-          }
-        ]
+      {
+        "content": "ROBERT PLANT & ALISON KRAUSS",
+        "start": "2022-02-16 18:15:00",
+        "end": "2022-02-16 19:15:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"JOHN PEEL STAGE",
-        "Artists": [
-          {
-            "Name": "PRIMAL SCREAM",
-            "Time-start": "2022-02-16 22:30:00", 
-            "Time-end": "2022-02-16 23:45:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "THE JESUS AND MARY CHAIN",
-            "Time-start": "2022-02-16 21:00:00", 
-            "Time-end": "2022-02-16 22:00:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "PHOEBE BRIDGERS",
-            "Time-start": "2022-02-16 19:30:00", 
-            "Time-end": "2022-02-16 20:30:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "SIGRID",
-            "Time-start": "2022-02-16 18:00:00", 
-            "Time-end": "2022-02-16 19:00:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "GIRL IN RED",
-            "Time-start": "2022-02-16 16:30:00", 
-            "Time-end": "2022-02-16 17:30:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "INHALER",
-            "Time-start": "2022-02-16 15:15:00", 
-            "Time-end": "2022-02-16 16:00:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "GRIFF",
-            "Time-start": "2022-02-16 14:00:00", 
-            "Time-end": "2022-02-16 14:45:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "BAD BOY CHILLER CREW",
-            "Time-start": "2022-02-16 12:45:00", 
-            "Time-end": "2022-02-16 13:30:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "ENGLISH TEACHER",
-            "Time-start": "2022-02-16 11:30:00", 
-            "Time-end": "2022-02-16 12:15:00",
-            "Stage": "JOHN PEEL STAGE"
-          }
-        ]
+      {
+        "content": "WOLF ALICE",
+        "start": "2022-02-16 16:45:00",
+        "end": "2022-02-16 17:45:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"THE PARK STAGE",
-        "Artists": [
-
-          {
-            "Name": "FOUR TET",
-            "Time-start": "2022-02-16 23:00:00", 
-            "Time-end": "2022-02-16 00:15:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "KHRUANGBIN",
-            "Time-start": "2022-02-16 21:15:00", 
-            "Time-end": "2022-02-16 22:15:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "SAINT ETIENNE",
-            "Time-start": "2022-02-16 19:45:00", 
-            "Time-end": "2022-02-16 20:45:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "ARLO PARKS",
-            "Time-start": "2022-02-16 18:15:00", 
-            "Time-end": "2022-02-16 19:15:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "DRY CLEANING",
-            "Time-start": "2022-02-16 16:45:00", 
-            "Time-end": "2022-02-16 17:45:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "CONFIDENCE MAN",
-            "Time-start": "2022-02-16 15:15:00", 
-            "Time-end": "2022-02-16 16:15:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "WET LEG",
-            "Time-start": "2022-02-16 14:00:00", 
-            "Time-end": "2022-02-16 14:45:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "ORLANDO WEEKS",
-            "Time-start": "2022-02-16 12:45:00", 
-            "Time-end": "2022-02-16 13:30:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "MATILDA MANN",
-            "Time-start": "2022-02-16 11:30:00", 
-            "Time-end": "2022-02-16 12:10:00",
-            "Stage": "THE PARK STAGE"
-          }
-        ]
+      {
+        "content": "CROWDED HOUSE",
+        "start": "2022-02-16 15:15:00",
+        "end": "2022-02-16 16:15:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"ACOUSTIC STAGE",
-        "Artists": [
-          {
-            "Name": "PAUL HEATON & JACQUI ABBOTT",
-            "Time-start": "2022-02-16 21:30:00", 
-            "Time-end": "2022-02-16 23:00:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "THE UNDERTONES",
-            "Time-start": "2022-02-16 20:00:00", 
-            "Time-end": "2022-02-16 21:00:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "HOTHOUSE FLOWERS",
-            "Time-start": "2022-02-16 18:30:00", 
-            "Time-end": "2022-02-16 19:30:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "BRIAN KENNEDY",
-            "Time-start": "2022-02-16 17:25:00", 
-            "Time-end": "2022-02-16 18:10:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "MARY COUGHLAN",
-            "Time-start": "2022-02-16 16:25:00", 
-            "Time-end": "2022-02-16 17:05:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "THE MARIACHIS",
-            "Time-start": "2022-02-16 15:30:00", 
-            "Time-end": "2022-02-16 16:10:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "IRISH MYTHEN",
-            "Time-start": "2022-02-16 14:30:00", 
-            "Time-end": "2022-02-16 15:10:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "PAVEY ARK",
-            "Time-start": "2022-02-16 13:40:00", 
-            "Time-end": "2022-02-16 14:20:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "ROSEANNE REID",
-            "Time-start": "2022-02-16 12:45:00", 
-            "Time-end": "2022-02-16 13:25:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "NOVELTY ISLAND",
-            "Time-start": "2022-02-16 12:00:00", 
-            "Time-end": "2022-02-16 12:30:00",
-            "Stage": "ACOUSTIC STAGE"
-          }
-        ]
+      {
+        "content": "RUFUS WAINWRIGHT",
+        "start": "2022-02-16 13:45:00",
+        "end": "2022-02-16 14:45:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
+      },
+      {
+        "content": "ZIGGY MARLEY",
+        "start": "2022-02-16 12:15:00",
+        "end": "2022-02-16 13:15:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
+      },
+      {
+        "content": "FOALS",
+        "start": "2022-02-16 22:30:00",
+        "end": "2022-02-16 23:45:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "ST. VINCENT",
+        "start": "2022-02-16 20:30:00",
+        "end": "2022-02-16 21:30:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "IDLES",
+        "start": "2022-02-16 18:45:00",
+        "end": "2022-02-16 19:45:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "SUPERGRASS",
+        "start": "2022-02-16 17:15:00",
+        "end": "2022-02-16 18:15:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "FIRST AID KIT",
+        "start": "2022-02-16 15:45:00",
+        "end": "2022-02-16 16:45:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "BLOSSOMS",
+        "start": "2022-02-16 14:15:00",
+        "end": "2022-02-16 15:15:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "KAE TEMPEST",
+        "start": "2022-02-16 13:00:00",
+        "end": "2022-02-16 13:45:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "THE LIBERTINES",
+        "start": "2022-02-16 11:30:00",
+        "end": "2022-02-16 12:30:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "LITTLE SIMZ",
+        "start": "2022-02-16 22:15:00",
+        "end": "2022-02-16 23:45:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "BONOBO",
+        "start": "2022-02-16 20:30:00",
+        "end": "2022-02-16 21:30:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "SEUN KUTI & EGYPT 80",
+        "start": "2022-02-16 19:00:00",
+        "end": "2022-02-16 20:00:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "TLC",
+        "start": "2022-02-16 17:30:00",
+        "end": "2022-02-16 18:30:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "SLEAFORD MODS",
+        "start": "2022-02-16 16:00:00",
+        "end": "2022-02-16 17:00:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "GREENTEA PENG",
+        "start": "2022-02-16 14:30:00",
+        "end": "2022-02-16 15:30:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "AROOJ AFTAB",
+        "start": "2022-02-16 13:00:00",
+        "end": "2022-02-16 14:00:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "NUBIYAN TWIST",
+        "start": "2022-02-16 11:30:00",
+        "end": "2022-02-16 12:30:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "PRIMAL SCREAM",
+        "start": "2022-02-16 22:30:00",
+        "end": "2022-02-16 23:45:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "THE JESUS AND MARY CHAIN",
+        "start": "2022-02-16 21:00:00",
+        "end": "2022-02-16 22:00:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "PHOEBE BRIDGERS",
+        "start": "2022-02-16 19:30:00",
+        "end": "2022-02-16 20:30:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "SIGRID",
+        "start": "2022-02-16 18:00:00",
+        "end": "2022-02-16 19:00:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "GIRL IN RED",
+        "start": "2022-02-16 16:30:00",
+        "end": "2022-02-16 17:30:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "INHALER",
+        "start": "2022-02-16 15:15:00",
+        "end": "2022-02-16 16:00:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "GRIFF",
+        "start": "2022-02-16 14:00:00",
+        "end": "2022-02-16 14:45:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "BAD BOY CHILLER CREW",
+        "start": "2022-02-16 12:45:00",
+        "end": "2022-02-16 13:30:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "ENGLISH TEACHER",
+        "start": "2022-02-16 11:30:00",
+        "end": "2022-02-16 12:15:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "FOUR TET",
+        "start": "2022-02-16 23:00:00",
+        "end": "2022-02-17 00:15:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "KHRUANGBIN",
+        "start": "2022-02-16 21:15:00",
+        "end": "2022-02-16 22:15:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "SAINT ETIENNE",
+        "start": "2022-02-16 19:45:00",
+        "end": "2022-02-16 20:45:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "ARLO PARKS",
+        "start": "2022-02-16 18:15:00",
+        "end": "2022-02-16 19:15:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "DRY CLEANING",
+        "start": "2022-02-16 16:45:00",
+        "end": "2022-02-16 17:45:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "CONFIDENCE MAN",
+        "start": "2022-02-16 15:15:00",
+        "end": "2022-02-16 16:15:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "WET LEG",
+        "start": "2022-02-16 14:00:00",
+        "end": "2022-02-16 14:45:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "ORLANDO WEEKS",
+        "start": "2022-02-16 12:45:00",
+        "end": "2022-02-16 13:30:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "MATILDA MANN",
+        "start": "2022-02-16 11:30:00",
+        "end": "2022-02-16 12:10:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "PAUL HEATON & JACQUI ABBOTT",
+        "start": "2022-02-16 21:30:00",
+        "end": "2022-02-16 23:00:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "THE UNDERTONES",
+        "start": "2022-02-16 20:00:00",
+        "end": "2022-02-16 21:00:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "HOTHOUSE FLOWERS",
+        "start": "2022-02-16 18:30:00",
+        "end": "2022-02-16 19:30:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "BRIAN KENNEDY",
+        "start": "2022-02-16 17:25:00",
+        "end": "2022-02-16 18:10:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "MARY COUGHLAN",
+        "start": "2022-02-16 16:25:00",
+        "end": "2022-02-16 17:05:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "THE MARIACHIS",
+        "start": "2022-02-16 15:30:00",
+        "end": "2022-02-16 16:10:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "IRISH MYTHEN",
+        "start": "2022-02-16 14:30:00",
+        "end": "2022-02-16 15:10:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "PAVEY ARK",
+        "start": "2022-02-16 13:40:00",
+        "end": "2022-02-16 14:20:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "ROSEANNE REID",
+        "start": "2022-02-16 12:45:00",
+        "end": "2022-02-16 13:25:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "NOVELTY ISLAND",
+        "start": "2022-02-16 12:00:00",
+        "end": "2022-02-16 12:30:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
       }
     ]
   },
   {
-    "Name": "Saturday",
-    "Stages": [
-      { 
-        "Name":"PYRAMID STAGE",
-        "Artists": [
-          {
-            "Name": "PAUL MCCARTNEY",
-            "Time-start": "2022-02-17 21:30:00", 
-            "Time-end": "2022-02-17 23:45:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "NOEL GALLAGHER'S HIGH FLYING BIRDS",
-            "Time-start": "2022-02-17 19:15:00", 
-            "Time-end": "2022-02-17 20:30:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "HAIM",
-            "Time-start": "2022-02-17 17:30:00", 
-            "Time-end": "2022-02-17 18:30:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "GRETA THUNBERG",
-            "Time-start": "2022-02-17 17:15:00", 
-            "Time-end": "2022-02-17 17:25:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "AJ TRACEY",
-            "Time-start": "2022-02-17 16:00:00", 
-            "Time-end": "2022-02-17 16:45:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "EASY LIFE",
-            "Time-start": "2022-02-17 14:30:00", 
-            "Time-end": "2022-02-17 15:30:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "JOY CROOKES",
-            "Time-start": "2022-02-17 13:15:00", 
-            "Time-end": "2022-02-17 14:00:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "LES AMAZONES D'AFRIQUE",
-            "Time-start": "2022-02-17 12:00:00", 
-            "Time-end": "2022-02-17 12:45:00",
-            "Stage": "PYRAMID STAGE"
-          }
-        ]
+    "Day": "Saturday",
+    "Artists": [
+      {
+        "content": "PAUL MCCARTNEY",
+        "start": "2022-02-17 21:30:00",
+        "end": "2022-02-17 23:45:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"OTHER STAGE",
-        "Artists": [
-          {
-            "Name": "MEGAN THEE STALLION",
-            "Time-start": "2022-02-17 22:30:00", 
-            "Time-end": "2022-02-17 23:30:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "BURNA BOY",
-            "Time-start": "2022-02-17 20:30:00", 
-            "Time-end": "2022-02-17 21:30:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "OLIVIA RODRIGO",
-            "Time-start": "2022-02-17 18:45:00", 
-            "Time-end": "2022-02-17 19:45:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "GLASS ANIMALS",
-            "Time-start": "2022-02-17 17:15:00", 
-            "Time-end": "2022-02-17 18:15:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "METRONOMY",
-            "Time-start": "2022-02-17 15:45:00", 
-            "Time-end": "2022-02-17 16:45:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "SKUNK ANANSIE",
-            "Time-start": "2022-02-17 14:15:00", 
-            "Time-end": "2022-02-17 15:15:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "TEMS",
-            "Time-start": "2022-02-17 13:00:00", 
-            "Time-end": "2022-02-17 13:45:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "HAK BAKER",
-            "Time-start": "2022-02-17 11:45:00", 
-            "Time-end": "2022-02-17 12:30:00",
-            "Stage": "OTHER STAGE"
-          }
-        ]
+      {
+        "content": "NOEL GALLAGHER'S HIGH FLYING BIRDS",
+        "start": "2022-02-17 19:15:00",
+        "end": "2022-02-17 20:30:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"WEST HOLTS STAGE",
-        "Artists": [
-          {
-            "Name": "ROISIN MURPHY",
-            "Time-start": "2022-02-17 22:15:00", 
-            "Time-end": "2022-02-17 23:45:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "CARIBOU",
-            "Time-start": "2022-02-17 20:30:00", 
-            "Time-end": "2022-02-17 21:30:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "LEON BRIDGES",
-            "Time-start": "2022-02-17 19:00:00", 
-            "Time-end": "2022-02-17 20:00:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "CELESTE",
-            "Time-start": "2022-02-17 17:30:00", 
-            "Time-end": "2022-02-17 18:30:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "YVES TUMOR",
-            "Time-start": "2022-02-17 16:00:00", 
-            "Time-end": "2022-02-17 17:00:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "BLACK MIDI",
-            "Time-start": "2022-02-17 14:30:00", 
-            "Time-end": "2022-02-17 15:30:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "BRASS AGAINST",
-            "Time-start": "2022-02-17 13:00:00", 
-            "Time-end": "2022-02-17 14:00:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "KIKAGAKU MOYO",
-            "Time-start": "2022-02-17 11:30:00", 
-            "Time-end": "2022-02-17 12:30:00",
-            "Stage": "WEST HOLTS STAGE"
-          }
-        ]
+      {
+        "content": "HAIM",
+        "start": "2022-02-17 17:30:00",
+        "end": "2022-02-17 18:30:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"JOHN PEEL STAGE",
-        "Artists": [
-          {
-            "Name": "JAMIE T",
-            "Time-start": "2022-02-17 22:30:00", 
-            "Time-end": "2022-02-17 23:45:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "YUNGBLUD",
-            "Time-start": "2022-02-17 21:00:00", 
-            "Time-end": "2022-02-17 22:00:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "GHETTS",
-            "Time-start": "2022-02-17 19:30:00", 
-            "Time-end": "2022-02-17 20:30:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "PA SALIEU",
-            "Time-start": "2022-02-17 18:00:00", 
-            "Time-end": "2022-02-17 19:00:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "BEABADOOBEE",
-            "Time-start": "2022-02-17 16:30:00", 
-            "Time-end": "2022-02-17 17:30:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "SELF ESTEEM",
-            "Time-start": "2022-02-17 15:15:00", 
-            "Time-end": "2022-02-17 16:00:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "HOLLY HUMBERSTONE",
-            "Time-start": "2022-02-17 14:00:00", 
-            "Time-end": "2022-02-17 14:45:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "ENNY",
-            "Time-start": "2022-02-17 12:45:00", 
-            "Time-end": "2022-02-17 13:30:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "GO_A",
-            "Time-start": "2022-02-17 11:30:00", 
-            "Time-end": "2022-02-17 12:15:00",
-            "Stage": "JOHN PEEL STAGE"
-          }
-        ]
+      {
+        "content": "GRETA THUNBERG",
+        "start": "2022-02-17 17:15:00",
+        "end": "2022-02-17 17:25:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"THE PARK STAGE",
-        "Artists": [
-          {
-            "Name": "JESSIE WARE",
-            "Time-start": "2022-02-17 23:00:00", 
-            "Time-end": "2022-02-17 00:15:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "MITSKI",
-            "Time-start": "2022-02-17 21:15:00", 
-            "Time-end": "2022-02-17 22:15:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "THE AVALANCHES",
-            "Time-start": "2022-02-17 19:45:00", 
-            "Time-end": "2022-02-17 20:45:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "BIG THIEF",
-            "Time-start": "2022-02-17 18:15:00", 
-            "Time-end": "2022-02-17 19:15:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "SQUID",
-            "Time-start": "2022-02-17 16:45:00", 
-            "Time-end": "2022-02-17 17:45:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "SAMPA THE GREAT",
-            "Time-start": "2022-02-17 15:15:00", 
-            "Time-end": "2022-02-17 16:15:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "GABRIELS",
-            "Time-start": "2022-02-17 14:00:00", 
-            "Time-end": "2022-02-17 14:45:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "KATY J PEARSON",
-            "Time-start": "2022-02-17 12:45:00", 
-            "Time-end": "2022-02-17 13:30:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "YASMIN WILLIAMS",
-            "Time-start": "2022-02-17 11:30:00", 
-            "Time-end": "2022-02-17 12:10:00",
-            "Stage": "THE PARK STAGE"
-          }
-        ]
+      {
+        "content": "AJ TRACEY",
+        "start": "2022-02-17 16:00:00",
+        "end": "2022-02-17 16:45:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"ACOUSTIC STAGE",
-        "Artists": [
-          {
-            "Name": "THE WATERBOYS",
-            "Time-start": "2022-02-17 21:30:00", 
-            "Time-end": "2022-02-17 23:00:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "RALPH MCTELL",
-            "Time-start": "2022-02-17 20:00:00", 
-            "Time-end": "2022-02-17 21:00:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "SCOUTING FOR GIRLS",
-            "Time-start": "2022-02-17 18:30:00", 
-            "Time-end": "2022-02-17 19:30:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "TONY CHRISTIE",
-            "Time-start": "2022-02-17 17:30:00", 
-            "Time-end": "2022-02-17 18:15:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "CHRIS DIFFORD",
-            "Time-start": "2022-02-17 16:30:00", 
-            "Time-end": "2022-02-17 17:15:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "GRAINNE DUFFY",
-            "Time-start": "2022-02-17 15:30:00", 
-            "Time-end": "2022-02-17 16:15:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "LAURA VEIRS",
-            "Time-start": "2022-02-17 14:30:00", 
-            "Time-end": "2022-02-17 15:10:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "KATHERINE PRIDDY",
-            "Time-start": "2022-02-17 13:40:00", 
-            "Time-end": "2022-02-17 14:20:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "49TH & MAIN",
-            "Time-start": "2022-02-17 12:45:00", 
-            "Time-end": "2022-02-17 13:25:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "TOM WEBBER BEST DEMO OF THE YEAR",
-            "Time-start": "2022-02-17 12:00:00", 
-            "Time-end": "2022-02-17 12:30:00",
-            "Stage": "ACOUSTIC STAGE"
-          }
-        ]
+      {
+        "content": "EASY LIFE",
+        "start": "2022-02-17 14:30:00",
+        "end": "2022-02-17 15:30:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
+      },
+      {
+        "content": "JOY CROOKES",
+        "start": "2022-02-17 13:15:00",
+        "end": "2022-02-17 14:00:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
+      },
+      {
+        "content": "LES AMAZONES D'AFRIQUE",
+        "start": "2022-02-17 12:00:00",
+        "end": "2022-02-17 12:45:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
+      },
+      {
+        "content": "MEGAN THEE STALLION",
+        "start": "2022-02-17 22:30:00",
+        "end": "2022-02-17 23:30:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "BURNA BOY",
+        "start": "2022-02-17 20:30:00",
+        "end": "2022-02-17 21:30:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "OLIVIA RODRIGO",
+        "start": "2022-02-17 18:45:00",
+        "end": "2022-02-17 19:45:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "GLASS ANIMALS",
+        "start": "2022-02-17 17:15:00",
+        "end": "2022-02-17 18:15:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "METRONOMY",
+        "start": "2022-02-17 15:45:00",
+        "end": "2022-02-17 16:45:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "SKUNK ANANSIE",
+        "start": "2022-02-17 14:15:00",
+        "end": "2022-02-17 15:15:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "TEMS",
+        "start": "2022-02-17 13:00:00",
+        "end": "2022-02-17 13:45:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "HAK BAKER",
+        "start": "2022-02-17 11:45:00",
+        "end": "2022-02-17 12:30:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "ROISIN MURPHY",
+        "start": "2022-02-17 22:15:00",
+        "end": "2022-02-17 23:45:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "CARIBOU",
+        "start": "2022-02-17 20:30:00",
+        "end": "2022-02-17 21:30:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "LEON BRIDGES",
+        "start": "2022-02-17 19:00:00",
+        "end": "2022-02-17 20:00:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "CELESTE",
+        "start": "2022-02-17 17:30:00",
+        "end": "2022-02-17 18:30:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "YVES TUMOR",
+        "start": "2022-02-17 16:00:00",
+        "end": "2022-02-17 17:00:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "BLACK MIDI",
+        "start": "2022-02-17 14:30:00",
+        "end": "2022-02-17 15:30:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "BRASS AGAINST",
+        "start": "2022-02-17 13:00:00",
+        "end": "2022-02-17 14:00:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "KIKAGAKU MOYO",
+        "start": "2022-02-17 11:30:00",
+        "end": "2022-02-17 12:30:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "JAMIE T",
+        "start": "2022-02-17 22:30:00",
+        "end": "2022-02-17 23:45:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "YUNGBLUD",
+        "start": "2022-02-17 21:00:00",
+        "end": "2022-02-17 22:00:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "GHETTS",
+        "start": "2022-02-17 19:30:00",
+        "end": "2022-02-17 20:30:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "PA SALIEU",
+        "start": "2022-02-17 18:00:00",
+        "end": "2022-02-17 19:00:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "BEABADOOBEE",
+        "start": "2022-02-17 16:30:00",
+        "end": "2022-02-17 17:30:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "SELF ESTEEM",
+        "start": "2022-02-17 15:15:00",
+        "end": "2022-02-17 16:00:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "HOLLY HUMBERSTONE",
+        "start": "2022-02-17 14:00:00",
+        "end": "2022-02-17 14:45:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "ENNY",
+        "start": "2022-02-17 12:45:00",
+        "end": "2022-02-17 13:30:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "GO_A",
+        "start": "2022-02-17 11:30:00",
+        "end": "2022-02-17 12:15:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "JESSIE WARE",
+        "start": "2022-02-17 23:00:00",
+        "end": "2022-02-18 00:15:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "MITSKI",
+        "start": "2022-02-17 21:15:00",
+        "end": "2022-02-17 22:15:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "THE AVALANCHES",
+        "start": "2022-02-17 19:45:00",
+        "end": "2022-02-17 20:45:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "BIG THIEF",
+        "start": "2022-02-17 18:15:00",
+        "end": "2022-02-17 19:15:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "SQUID",
+        "start": "2022-02-17 16:45:00",
+        "end": "2022-02-17 17:45:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "SAMPA THE GREAT",
+        "start": "2022-02-17 15:15:00",
+        "end": "2022-02-17 16:15:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "GABRIELS",
+        "start": "2022-02-17 14:00:00",
+        "end": "2022-02-17 14:45:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "KATY J PEARSON",
+        "start": "2022-02-17 12:45:00",
+        "end": "2022-02-17 13:30:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "YASMIN WILLIAMS",
+        "start": "2022-02-17 11:30:00",
+        "end": "2022-02-17 12:10:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "THE WATERBOYS",
+        "start": "2022-02-17 21:30:00",
+        "end": "2022-02-17 23:00:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "RALPH MCTELL",
+        "start": "2022-02-17 20:00:00",
+        "end": "2022-02-17 21:00:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "SCOUTING FOR GIRLS",
+        "start": "2022-02-17 18:30:00",
+        "end": "2022-02-17 19:30:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "TONY CHRISTIE",
+        "start": "2022-02-17 17:30:00",
+        "end": "2022-02-17 18:15:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "CHRIS DIFFORD",
+        "start": "2022-02-17 16:30:00",
+        "end": "2022-02-17 17:15:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "GRAINNE DUFFY",
+        "start": "2022-02-17 15:30:00",
+        "end": "2022-02-17 16:15:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "LAURA VEIRS",
+        "start": "2022-02-17 14:30:00",
+        "end": "2022-02-17 15:10:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "KATHERINE PRIDDY",
+        "start": "2022-02-17 13:40:00",
+        "end": "2022-02-17 14:20:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "49TH & MAIN",
+        "start": "2022-02-17 12:45:00",
+        "end": "2022-02-17 13:25:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "TOM WEBBER BEST DEMO OF THE YEAR",
+        "start": "2022-02-17 12:00:00",
+        "end": "2022-02-17 12:30:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
       }
     ]
   },
   {
-    "Name": "Sunday",
-    "Stages": [
-      { 
-        "Name":"PYRAMID STAGE",
-        "Artists": [
-          {
-            "Name": "KENDRICK LAMAR",
-            "Time-start": "2022-02-18 21:45:00", 
-            "Time-end": "2022-02-18 23:15:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "LORDE",
-            "Time-start": "2022-02-18 19:30:00", 
-            "Time-end": "2022-02-18 20:45:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "ELBOW",
-            "Time-start": "2022-02-18 17:45:00", 
-            "Time-end": "2022-02-18 18:45:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "DIANA ROSS",
-            "Time-start": "2022-02-18 16:00:00", 
-            "Time-end": "2022-02-18 17:15:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "HERBIE HANCOCK",
-            "Time-start": "2022-02-18 14:00:00", 
-            "Time-end": "2022-02-18 15:00:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "DAKHABRAKHA",
-            "Time-start": "2022-02-18 12:45:00", 
-            "Time-end": "2022-02-18 13:30:00",
-            "Stage": "PYRAMID STAGE"
-          },
-          {
-            "Name": "BLACK DYKE BAND",
-            "Time-start": "2022-02-18 11:30:00", 
-            "Time-end": "2022-02-18 12:15:00",
-            "Stage": "PYRAMID STAGE"
-          }
-        ]
+    "Day": "Sunday",
+    "Artists": [
+      {
+        "content": "KENDRICK LAMAR",
+        "start": "2022-02-18 21:45:00",
+        "end": "2022-02-18 23:15:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"OTHER STAGE",
-        "Artists": [
-          {
-            "Name": "PET SHOP BOYS",
-            "Time-start": "2022-02-18 21:40:00", 
-            "Time-end": "2022-02-18 23:15:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "YEARS & YEARS",
-            "Time-start": "2022-02-18 19:45:00", 
-            "Time-end": "2022-02-18 20:45:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "KACEY MUSGRAVES",
-            "Time-start": "2022-02-18 18:00:00", 
-            "Time-end": "2022-02-18 19:00:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "FONTAINES DC",
-            "Time-start": "2022-02-18 16:30:00", 
-            "Time-end": "2022-02-18 17:30:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "DECLAN MCKENNA",
-            "Time-start": "2022-02-18 15:00:00", 
-            "Time-end": "2022-02-18 16:00:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "LIANNE LA HAVAS",
-            "Time-start": "2022-02-18 13:30:00", 
-            "Time-end": "2022-02-18 14:30:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "SEA GIRLS",
-            "Time-start": "2022-02-18 12:15:00", 
-            "Time-end": "2022-02-18 13:00:00",
-            "Stage": "OTHER STAGE"
-          },
-          {
-            "Name": "KOJEY RADICAL",
-            "Time-start": "2022-02-18 11:00:00", 
-            "Time-end": "2022-02-18 11:45:00",
-            "Stage": "OTHER STAGE"
-          }
-        ]
+      {
+        "content": "LORDE",
+        "start": "2022-02-18 19:30:00",
+        "end": "2022-02-18 20:45:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"WEST HOLTS STAGE",
-        "Artists": [
-          {
-            "Name": "BICEP",
-            "Time-start": "2022-02-18 21:45:00", 
-            "Time-end": "2022-02-18 23:15:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "ANGELIQUE KIDJO",
-            "Time-start": "2022-02-18 20:00:00", 
-            "Time-end": "2022-02-18 21:00:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "KOFFEE",
-            "Time-start": "2022-02-18 18:30:00", 
-            "Time-end": "2022-02-18 19:30:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "SNARKY PUPPY",
-            "Time-start": "2022-02-18 17:00:00", 
-            "Time-end": "2022-02-18 18:00:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "NUBYA GARCIA",
-            "Time-start": "2022-02-18 15:30:00", 
-            "Time-end": "2022-02-18 16:30:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "NIGHTMARES ON WAX",
-            "Time-start": "2022-02-18 14:00:00", 
-            "Time-end": "2022-02-18 15:00:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "EMMA-JEAN THACKRAY",
-            "Time-start": "2022-02-18 12:30:00", 
-            "Time-end": "2022-02-18 13:30:00",
-            "Stage": "WEST HOLTS STAGE"
-          },
-          {
-            "Name": "ISHMAEL ENSEMBLE",
-            "Time-start": "2022-02-18 11:00:00", 
-            "Time-end": "2022-02-18 12:00:00",
-            "Stage": "WEST HOLTS STAGE"
-          }
-        ]
+      {
+        "content": "ELBOW",
+        "start": "2022-02-18 17:45:00",
+        "end": "2022-02-18 18:45:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"JOHN PEEL STAGE",
-        "Artists": [
-          {
-            "Name": "CHARLI XCX",
-            "Time-start": "2022-02-18 21:30:00", 
-            "Time-end": "2022-02-18 22:45:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "LITTLE DRAGON",
-            "Time-start": "2022-02-18 20:00:00", 
-            "Time-end": "2022-02-18 21:00:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "TURNSTILE",
-            "Time-start": "2022-02-18 18:30:00", 
-            "Time-end": "2022-02-18 19:30:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "AMYL AND THE SNIFFERS",
-            "Time-start": "2022-02-18 17:00:00", 
-            "Time-end": "2022-02-18 18:00:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "CLAIRO",
-            "Time-start": "2022-02-18 15:30:00", 
-            "Time-end": "2022-02-18 16:30:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "GEORGE EZRA",
-            "Time-start": "2022-02-18 14:00:00", 
-            "Time-end": "2022-02-18 15:00:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "SPORTS TEAM",
-            "Time-start": "2022-02-18 12:30:00", 
-            "Time-end": "2022-02-18 13:30:00",
-            "Stage": "JOHN PEEL STAGE"
-          },
-          {
-            "Name": "JUST MUSTARD",
-            "Time-start": "2022-02-18 11:15:00", 
-            "Time-end": "2022-02-18 12:00:00",
-            "Stage": "JOHN PEEL STAGE"
-          }
-        ]
+      {
+        "content": "DIANA ROSS",
+        "start": "2022-02-18 16:00:00",
+        "end": "2022-02-18 17:15:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"THE PARK STAGE",
-        "Artists": [
-          {
-            "Name": "COURTNEY BARNETT",
-            "Time-start": "2022-02-18 21:15:00", 
-            "Time-end": "2022-02-18 22:30:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "JARV IS",
-            "Time-start": "2022-02-18 19:45:00", 
-            "Time-end": "2022-02-18 20:45:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "JACK WHITE",
-            "Time-start": "2022-02-18 18:15:00", 
-            "Time-end": "2022-02-18 19:15:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "CAROLINE POLACHEK",
-            "Time-start": "2022-02-18 16:30:00", 
-            "Time-end": "2022-02-18 17:30:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "CATE LE BON",
-            "Time-start": "2022-02-18 15:15:00", 
-            "Time-end": "2022-02-18 16:00:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "WARMDUSCHER",
-            "Time-start": "2022-02-18 14:00:00", 
-            "Time-end": "2022-02-18 14:45:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "BIG JOANIE",
-            "Time-start": "2022-02-18 12:45:00", 
-            "Time-end": "2022-02-18 13:30:00",
-            "Stage": "THE PARK STAGE"
-          },
-          {
-            "Name": "DEEP THROAT CHOIR",
-            "Time-start": "2022-02-18 11:30:00", 
-            "Time-end": "2022-02-18 12:15:00",
-            "Stage": "THE PARK STAGE"
-          }
-        ]
+      {
+        "content": "HERBIE HANCOCK",
+        "start": "2022-02-18 14:00:00",
+        "end": "2022-02-18 15:00:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
       },
-      { 
-        "Name":"ACOUSTIC STAGE",
-        "Artists": [
-          {
-            "Name": "SUZANNE VEGA",
-            "Time-start": "2022-02-18 21:30:00", 
-            "Time-end": "2022-02-18 23:00:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "THE SHIRES",
-            "Time-start": "2022-02-18 20:00:00", 
-            "Time-end": "2022-02-18 21:00:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "THE BOOTLEG BEATLES",
-            "Time-start": "2022-02-18 18:30:00", 
-            "Time-end": "2022-02-18 19:30:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "FISHERMAN'S FRIENDS",
-            "Time-start": "2022-02-18 17:30:00", 
-            "Time-end": "2022-02-18 18:15:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "GLENN TILBROOK",
-            "Time-start": "2022-02-18 16:30:00", 
-            "Time-end": "2022-02-18 17:15:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "DAMIEN DEMPSEY",
-            "Time-start": "2022-02-18 15:30:00", 
-            "Time-end": "2022-02-18 16:15:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "ERROL LINTON",
-            "Time-start": "2022-02-18 14:30:00", 
-            "Time-end": "2022-02-18 15:10:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "CHLOE FOY",
-            "Time-start": "2022-02-18 13:40:00", 
-            "Time-end": "2022-02-18 14:20:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "LEWIS MCLAUGHLIN EMERGING TALENT COMPETITION WINNER",
-            "Time-start": "2022-02-18 12:45:00", 
-            "Time-end": "2022-02-18 13:25:00",
-            "Stage": "ACOUSTIC STAGE"
-          },
-          {
-            "Name": "MEGAN MCKENNA",
-            "Time-start": "2022-02-18 12:00:00", 
-            "Time-end": "2022-02-18 12:30:00",
-            "Stage": "ACOUSTIC STAGE"
-          }
-        ]
+      {
+        "content": "DAKHABRAKHA",
+        "start": "2022-02-18 12:45:00",
+        "end": "2022-02-18 13:30:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
+      },
+      {
+        "content": "BLACK DYKE BAND",
+        "start": "2022-02-18 11:30:00",
+        "end": "2022-02-18 12:15:00",
+        "Stage": "PYRAMID STAGE",
+        "group": 1
+      },
+      {
+        "content": "PET SHOP BOYS",
+        "start": "2022-02-18 21:40:00",
+        "end": "2022-02-18 23:15:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "YEARS & YEARS",
+        "start": "2022-02-18 19:45:00",
+        "end": "2022-02-18 20:45:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "KACEY MUSGRAVES",
+        "start": "2022-02-18 18:00:00",
+        "end": "2022-02-18 19:00:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "FONTAINES DC",
+        "start": "2022-02-18 16:30:00",
+        "end": "2022-02-18 17:30:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "DECLAN MCKENNA",
+        "start": "2022-02-18 15:00:00",
+        "end": "2022-02-18 16:00:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "LIANNE LA HAVAS",
+        "start": "2022-02-18 13:30:00",
+        "end": "2022-02-18 14:30:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "SEA GIRLS",
+        "start": "2022-02-18 12:15:00",
+        "end": "2022-02-18 13:00:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "KOJEY RADICAL",
+        "start": "2022-02-18 11:00:00",
+        "end": "2022-02-18 11:45:00",
+        "Stage": "OTHER STAGE",
+        "group": 2
+      },
+      {
+        "content": "BICEP",
+        "start": "2022-02-18 21:45:00",
+        "end": "2022-02-18 23:15:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "ANGELIQUE KIDJO",
+        "start": "2022-02-18 20:00:00",
+        "end": "2022-02-18 21:00:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "KOFFEE",
+        "start": "2022-02-18 18:30:00",
+        "end": "2022-02-18 19:30:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "SNARKY PUPPY",
+        "start": "2022-02-18 17:00:00",
+        "end": "2022-02-18 18:00:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "NUBYA GARCIA",
+        "start": "2022-02-18 15:30:00",
+        "end": "2022-02-18 16:30:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "NIGHTMARES ON WAX",
+        "start": "2022-02-18 14:00:00",
+        "end": "2022-02-18 15:00:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "EMMA-JEAN THACKRAY",
+        "start": "2022-02-18 12:30:00",
+        "end": "2022-02-18 13:30:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "ISHMAEL ENSEMBLE",
+        "start": "2022-02-18 11:00:00",
+        "end": "2022-02-18 12:00:00",
+        "Stage": "WEST HOLTS STAGE",
+        "group": 3
+      },
+      {
+        "content": "CHARLI XCX",
+        "start": "2022-02-18 21:30:00",
+        "end": "2022-02-18 22:45:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "LITTLE DRAGON",
+        "start": "2022-02-18 20:00:00",
+        "end": "2022-02-18 21:00:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "TURNSTILE",
+        "start": "2022-02-18 18:30:00",
+        "end": "2022-02-18 19:30:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "AMYL AND THE SNIFFERS",
+        "start": "2022-02-18 17:00:00",
+        "end": "2022-02-18 18:00:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "CLAIRO",
+        "start": "2022-02-18 15:30:00",
+        "end": "2022-02-18 16:30:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "GEORGE EZRA",
+        "start": "2022-02-18 14:00:00",
+        "end": "2022-02-18 15:00:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "SPORTS TEAM",
+        "start": "2022-02-18 12:30:00",
+        "end": "2022-02-18 13:30:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "JUST MUSTARD",
+        "start": "2022-02-18 11:15:00",
+        "end": "2022-02-18 12:00:00",
+        "Stage": "JOHN PEEL STAGE",
+        "group": 4
+      },
+      {
+        "content": "COURTNEY BARNETT",
+        "start": "2022-02-18 21:15:00",
+        "end": "2022-02-18 22:30:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "JARV IS",
+        "start": "2022-02-18 19:45:00",
+        "end": "2022-02-18 20:45:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "JACK WHITE",
+        "start": "2022-02-18 18:15:00",
+        "end": "2022-02-18 19:15:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "CAROLINE POLACHEK",
+        "start": "2022-02-18 16:30:00",
+        "end": "2022-02-18 17:30:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "CATE LE BON",
+        "start": "2022-02-18 15:15:00",
+        "end": "2022-02-18 16:00:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "WARMDUSCHER",
+        "start": "2022-02-18 14:00:00",
+        "end": "2022-02-18 14:45:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "BIG JOANIE",
+        "start": "2022-02-18 12:45:00",
+        "end": "2022-02-18 13:30:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "DEEP THROAT CHOIR",
+        "start": "2022-02-18 11:30:00",
+        "end": "2022-02-18 12:15:00",
+        "Stage": "THE PARK STAGE",
+        "group": 5
+      },
+      {
+        "content": "SUZANNE VEGA",
+        "start": "2022-02-18 21:30:00",
+        "end": "2022-02-18 23:00:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "THE SHIRES",
+        "start": "2022-02-18 20:00:00",
+        "end": "2022-02-18 21:00:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "THE BOOTLEG BEATLES",
+        "start": "2022-02-18 18:30:00",
+        "end": "2022-02-18 19:30:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "FISHERMAN'S FRIENDS",
+        "start": "2022-02-18 17:30:00",
+        "end": "2022-02-18 18:15:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "GLENN TILBROOK",
+        "start": "2022-02-18 16:30:00",
+        "end": "2022-02-18 17:15:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "DAMIEN DEMPSEY",
+        "start": "2022-02-18 15:30:00",
+        "end": "2022-02-18 16:15:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "ERROL LINTON",
+        "start": "2022-02-18 14:30:00",
+        "end": "2022-02-18 15:10:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "CHLOE FOY",
+        "start": "2022-02-18 13:40:00",
+        "end": "2022-02-18 14:20:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "LEWIS MCLAUGHLIN EMERGING TALENT COMPETITION WINNER",
+        "start": "2022-02-18 12:45:00",
+        "end": "2022-02-18 13:25:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
+      },
+      {
+        "content": "MEGAN MCKENNA",
+        "start": "2022-02-18 12:00:00",
+        "end": "2022-02-18 12:30:00",
+        "Stage": "ACOUSTIC STAGE",
+        "group": 6
       }
     ]
   }
