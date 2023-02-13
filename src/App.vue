@@ -11,7 +11,7 @@ import Clashfinder from './components/Clashfinder.vue'
       <div>
         <h2 class="text-sm">Choose your festival</h2>
         <!-- <Glastonbury /> -->
-        <select class="p-2 bg-blue-200 mb-2 rounded-md" ref="selector" v-model="festival" @change="switchClashfinder()">
+        <select class="p-2 bg-blue-200 mb-2 cursor-pointer rounded-md" ref="selector" v-model="festival" @change="switchClashfinder()">
           <option value="null" disabled selected hidden>Select</option>
           <option value="glastonbury-2022" selected>Glastonbury Festival 2022</option>
           <option value="leeds-2022">Leeds Festival 2022</option>
@@ -19,9 +19,16 @@ import Clashfinder from './components/Clashfinder.vue'
       </div>
       <div>
         <h2 class="text-sm">Sync with Spotify</h2>
-        <button class="bg-slate-900 p-2 px-4 mb-2 rounded-md text-white hover:bg-slate-700 flex justify-center">
+        <button class="bg-slate-900 py-[6px] px-4 mb-2 rounded-md text-white hover:bg-slate-700 flex justify-center">
           Connect
           <img class="w-5 ml-2" src="./assets/Spotify_icon.svg.png" alt="Spotify Icon">
+        </button>
+      </div>
+      <div>
+        <h2 class="text-sm">Print your clashfinder</h2>
+        <button
+          class="border hover:bg-gray-200 border-slate-900 py-[6px] px-4 mb-2 rounded-md flex justify-center">
+          Print
         </button>
       </div>
     </div>
@@ -40,6 +47,9 @@ export default {
       festivalData: [],
       error: null
     }
+  },
+  mounted() {
+    this.switchClashfinder('glastonbury-2022')
   },
   methods: {
     async switchClashfinder(input) {
@@ -71,32 +81,38 @@ export default {
       ]
 
       var options = [
-      {
-        min: '2022-02-16 10:30:00',
-        max: '2022-02-17 01:00:00',
-        zoomFriction: 10,
-        zoomMin: 3000000,
-        multiselect: true
-      },
-      {
-        min: '2022-02-17 10:30:00',
-        max: '2022-02-18 01:00:00',
-        zoomFriction: 10,
-        zoomMin: 3000000
-      },
-      {
-        min: '2022-02-18 10:30:00',
-        max: '2022-02-19 01:00:00',
-        zoomFriction: 10,
-        zoomMin: 3000000
-      }
-    ]
+        {
+          min: '2022-02-16 10:30:00',
+          max: '2022-02-17 01:00:00',
+          zoomFriction: 10,
+          zoomMin: 3000000,
+          multiselect: true,
+          showTooltips: true,
+        },
+        {
+          min: '2022-02-17 10:30:00',
+          max: '2022-02-18 01:00:00',
+          zoomFriction: 10,
+          zoomMin: 3000000,
+          multiselect: true,
+          showTooltips: true,
+        },
+        {
+          min: '2022-02-18 10:30:00',
+          max: '2022-02-19 01:00:00',
+          zoomFriction: 10,
+          zoomMin: 3000000,
+          multiselect: true,
+          showTooltips: true,
+        }
+      ]
 
       const timelines = []
       const containers = []
       json.forEach((day, i) => {
         containers.push(document.getElementById(`visualization_${i}`))
-        timelines.push(new vis.Timeline(containers[i], day.Artists, groups, options[i]))
+        const timeline = new vis.Timeline(containers[i], day.Artists, groups, options[i])
+        timelines.push(timeline)
       })
     }
   },
