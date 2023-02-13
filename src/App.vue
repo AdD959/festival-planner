@@ -32,6 +32,7 @@ import Clashfinder from './components/Clashfinder.vue'
         </button>
       </div>
     </div>
+    <p class="text-red-500">{{  error  }}</p>
     <!-- <Clashfinder :festivalData="festivalData" :festival="festival" :error="error" /> -->
     <div id="visualization_0" class="mb-2"></div>
     <div id="visualization_1" class="mb-2"></div>
@@ -49,7 +50,7 @@ export default {
     }
   },
   mounted() {
-    this.switchClashfinder('glastonbury-2022')
+    // this.switchClashfinder('glastonbury-2022')
   },
   methods: {
     async switchClashfinder(input) {
