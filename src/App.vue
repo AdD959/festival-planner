@@ -4,7 +4,7 @@ import Clashfinder from './components/Clashfinder.vue'
 </script>
 
 <template>
-  <main class="w-full max-w-[1080px]">
+  <main class="w-full max-w-[1080px] relative">
     <h1 class="text-5xl font-bold mt-20">Festival Planner</h1>
     <!-- <SpotifyConnect /> -->
     <div class="mt-10 flex gap-3">
