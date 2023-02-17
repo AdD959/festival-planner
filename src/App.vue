@@ -1,6 +1,7 @@
 <script setup>
 import SpotifyConnect from './components/SpotifyConnect.vue'
 import Clashfinder from './components/Clashfinder.vue'
+import SpotifySync from './components/Spotify.vue'
 </script>
 
 <template>
@@ -10,7 +11,6 @@ import Clashfinder from './components/Clashfinder.vue'
     <div class="mt-10 flex gap-3">
       <div>
         <h2 class="text-sm">Choose your festival</h2>
-        <!-- <Glastonbury /> -->
         <select class="p-2 bg-blue-200 mb-2 cursor-pointer rounded-md" ref="selector" v-model="festival" @change="switchClashfinder()">
           <option value="null" disabled selected hidden>Select</option>
           <option value="glastonbury-2022" selected>Glastonbury Festival 2022</option>
@@ -18,11 +18,7 @@ import Clashfinder from './components/Clashfinder.vue'
         </select>
       </div>
       <div>
-        <h2 class="text-sm">Sync with Spotify</h2>
-        <button class="bg-slate-900 py-[6px] px-4 mb-2 rounded-md text-white hover:bg-slate-700 flex justify-center">
-          Connect
-          <img class="w-5 ml-2" src="./assets/Spotify_icon.svg.png" alt="Spotify Icon">
-        </button>
+        <SpotifySync />
       </div>
       <div>
         <h2 class="text-sm">Print your clashfinder</h2>

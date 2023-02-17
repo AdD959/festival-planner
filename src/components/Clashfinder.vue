@@ -1,5 +1,4 @@
 <script setup>
-  // import Glastonbury from '../components/glastonbury/Glastonbury.vue'
   import Error from '../components/errors/Generic.vue'
 </script>
 
