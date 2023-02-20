@@ -1,7 +1,7 @@
 <template>
     <h2 class="text-sm">Sync with Spotify</h2>
-    <button @click="auth" :disabled="disableSpotifyButton" :class="disableSpotifyButton ? 'bg-gray-300 cursor-not-allowed text-gray-400' : 'hover:bg-slate-700'"
-        class="bg-slate-900 py-[6px] px-4 mb-2 rounded-md text-white flex justify-center">
+    <button @click="auth" :disabled="disableSpotifyButton" :class="disableSpotifyButton ? 'bg-gray-300 cursor-not-allowed text-gray-400' : 'hover:bg-slate-700 text-white bg-slate-900'"
+        class="py-[6px] px-4 mb-2 rounded-md  flex justify-center">
         Connect
         <img class="w-5 ml-2" :class="disableSpotifyButton ? 'grayscale opacity-20' : ''" src="../assets/Spotify_icon.svg.png" alt="Spotify Icon">
     </button>
