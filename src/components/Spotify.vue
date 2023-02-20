@@ -101,7 +101,7 @@ export default {
                             }
     
                             document.getElementById("result").innerHTML = message;
-                        };
+                        }.bind(this);
                         xhr.responseType = 'json';
                         xhr.open("POST", 'https://accounts.spotify.com/api/token', true);
                         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
