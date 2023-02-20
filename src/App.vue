@@ -1,7 +1,7 @@
 <script setup>
 import SpotifyConnect from './components/SpotifyConnect.vue'
 import Clashfinder from './components/Clashfinder.vue'
-import SpotifySync from './components/Spotify.vue'
+import Spotify from './components/Spotify.vue'
 </script>
 
 <template>
@@ -18,7 +18,7 @@ import SpotifySync from './components/Spotify.vue'
         </select>
       </div>
       <div>
-        <SpotifySync />
+        <Spotify />
       </div>
       <div>
         <h2 class="text-sm">Print your clashfinder</h2>

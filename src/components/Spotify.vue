@@ -7,21 +7,19 @@
     </button>
 
     <div class="absolute top-5 right-5 flex items-start gap-1">
+        <button @click="deleteCache" class="bg-red-200 p-1 text-xs rounded text-red-600 border-black border border-b-2">
+            Delete Cache
+        </button>
         <div class="bg-blue-200 p-1 text-xs rounded text-blue-600 border-black border border-b-2">
             Token Requests:
-            <span class="ml-1 text-red-blue bold">
+            <span class="text-red-blue bold">
                 {{ tokenRequests }}
             </span>
         </div>
         <div class="bg-green-200 p-1 text-xs rounded text-green-600 border-black border border-b-2">
             Track Requests:
-            <span class="ml-1 text-green-600 bold">{{ trackRequests }}</span>
+            <span class=" text-green-600 bold">{{ trackRequests }}</span>
         </div>
-        <button @click="createNewRequest" class="bg-green-600 p-1 text-xs border-black rounded border border-b-2">
-            <span class="ml-1 text-white bold">
-                Refresh Track Tokens
-            </span>
-        </button>
         <button @click="showJSON = !showJSON" class="bg-blue-200 p-1 text-xs rounded border border-b-2 border-black" :class="showJSON ? 'bg-black text-white ' : 'text-blue-600'">Show/Hide Track
             Response
         </button>
@@ -52,73 +50,87 @@ export default {
     },
     methods: {
         init() {
-            this.tokenRequests = window.sessionStorage.getItem("tokenRequests");
-            this.trackRequests = window.sessionStorage.getItem("trackRequests");
+            console.log('init called')
+            this.tokenRequests = window.localStorage.getItem("tokenRequests");
+            this.trackRequests = window.localStorage.getItem("trackRequests");
+
+            this.trackRequests = this.trackRequests ? this.trackRequests : 0;
+            this.tokenRequests = this.tokenRequests ? this.tokenRequests : 0;
+            
             this.results = JSON.parse(JSON.stringify(this.results))
             this.checkAuth()
         },
         checkAuth() {
-            const cachedTracks = window.sessionStorage.getItem("cachedSpotifyLibrary");
+            const cachedTracks = window.localStorage.getItem("cachedSpotifyLibrary_1");
             if (cachedTracks) {
+                console.log('cached tracks have been found.')
                 this.interpret(JSON.parse(cachedTracks))
                 return;
-            }
-            const accessToken = window.sessionStorage.getItem("spotifyWebAPIAccessToken");
-            if (accessToken) { this.getArtistData(); }
-            else if (window.location.search) {
-                var args = new URLSearchParams(window.location.search);
-                var code = args.get("code");
-
-                if (code) {
-                    var xhr = new XMLHttpRequest();
-
-                    xhr.onload = function () {
-                        this.tokenRequests = window.sessionStorage.getItem("tokenRequests");
-                        if (!this.tokenRequests) {
-                            window.sessionStorage.setItem("tokenRequests", 1);
-                        } else {
-                            console.log('setting new token value...')
-                            window.sessionStorage.setItem("tokenRequests", this.tokenRequests + 1);
-                        }
-                        var response = xhr.response;
-                        var message;
-
-                        if (xhr.status == 200) {
-                            window.sessionStorage.setItem("spotifyWebAPIAccessToken", response.access_token);
-                            this.getArtistData();
-                        }
-                        else {
-                            message = "Error: " + response.error_description + " (" + response.error + ")";
-                        }
-
-                        document.getElementById("result").innerHTML = message;
-                    };
-                    xhr.responseType = 'json';
-                    xhr.open("POST", 'https://accounts.spotify.com/api/token', true);
-                    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                    xhr.send(new URLSearchParams({
-                        client_id: 'c6ead95860334243aabf554648943aa7',
-                        code_verifier: window.sessionStorage.getItem("code_verifier"),
-                        grant_type: "authorization_code",
-                        redirect_uri: location.href.replace(location.search, ''),
-                        code: code
-                    }));
+            } else {
+                console.log('no cached tracks have been found.')
+                const accessToken = window.localStorage.getItem("spotifyWebAPIAccessToken");
+                if (accessToken) { this.getArtistData(); console.log('access token found') }
+                else if (window.location.search) {
+                    console.log('access token not found, checking if the page returned contains callback code...')
+                    var args = new URLSearchParams(window.location.search);
+                    var code = args.get("code");
+    
+                    if (code) {
+                        console.log('callback code found')
+                        var xhr = new XMLHttpRequest();
+    
+                        xhr.onload = function () {
+                            this.tokenRequests = window.localStorage.getItem("tokenRequests");
+                            if (!this.tokenRequests) {
+                                console.log('no previous token request stashed, setting new request...')
+                                window.localStorage.setItem("tokenRequests", 1);
+                            } else {
+                                console.log('setting new token value...')
+                                console.log('type: ' + typeof(this.tokenRequests))
+                                window.localStorage.setItem("tokenRequests", this.tokenRequests + 1);
+                            }
+                            var response = xhr.response;
+                            var message;
+    
+                            if (xhr.status == 200) {
+                                window.localStorage.setItem("spotifyWebAPIAccessToken", response.access_token);
+                                this.getArtistData();
+                            }
+                            else {
+                                message = "Error: " + response.error_description + " (" + response.error + ")";
+                            }
+    
+                            document.getElementById("result").innerHTML = message;
+                        };
+                        xhr.responseType = 'json';
+                        xhr.open("POST", 'https://accounts.spotify.com/api/token', true);
+                        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                        xhr.send(new URLSearchParams({
+                            client_id: 'c6ead95860334243aabf554648943aa7',
+                            code_verifier: window.localStorage.getItem("code_verifier"),
+                            grant_type: "authorization_code",
+                            redirect_uri: location.href.replace(location.search, ''),
+                            code: code
+                        }));
+                    }
                 }
             }
         },
         getArtistData() {
-            if (window.sessionStorage.getItem("spotifyWebAPIAccessToken")) {
-                const accessToken = window.sessionStorage.getItem("spotifyWebAPIAccessToken");
+            if (window.localStorage.getItem("spotifyWebAPIAccessToken")) {
+                const accessToken = window.localStorage.getItem("spotifyWebAPIAccessToken");
                 let offset = 0;
                 let batch = 0;
                 // while (offset < 50) {
-                this.trackRequests = window.sessionStorage.getItem("trackRequests");
+                this.trackRequests = window.localStorage.getItem("trackRequests");
                 console.log('track requets:' + this.trackRequests)
                 if (!this.trackRequests) {
-                    window.sessionStorage.setItem("trackRequests", 1);
+                    window.localStorage.setItem("trackRequests", 1);
+                    this.trackRequests = 1
                 } else {
                     console.log('setting new request value...')
-                    window.sessionStorage.setItem("trackRequests", this.trackRequests + 1);
+                    let val = this.trackRequests++
+                    window.localStorage.setItem("trackRequests", val);
                 }
                 fetch(`https://api.spotify.com/v1/me/tracks?limit=50&offset=${offset}`, {
                     method: 'GET',
@@ -128,13 +140,22 @@ export default {
                     },
                 })
                     .then(response => response.json())
-                    .then(res => { window.sessionStorage.setItem(`cachedSpotifyLibrary_${batch}`, JSON.stringify(res)); return res; })
+                    .then(res => { window.localStorage.setItem(`cachedSpotifyLibrary_${batch}`, JSON.stringify(res)); return res; })
                     .then(response => { this.interpret(response); })
                     .catch(err => console.error(err));
                 batch++;
                 offset += 50;
                 // }
             }
+        },
+        deleteCache() {
+            window.localStorage.clear();
+            this.artists = []
+            this.results = {}
+            this.lineup = {}
+            this.tokenRequests = 0
+            this.trackRequests = 0
+            console.log('%clocal storage deleted', 'color: red;background-color:#FECACA;padding:4px;')
         },
         auth() {
             var codeVerifier = this.generateRandomString(64);
@@ -160,7 +181,7 @@ export default {
                         redirect_uri: redirectUri,
                         scope: 'user-library-read'
                     });
-                    window.sessionStorage.setItem("code_verifier", codeVerifier);
+                    window.localStorage.setItem("code_verifier", codeVerifier);
                     window.location = 'https://accounts.spotify.com/authorize?' + args;
                 });
         },
@@ -180,11 +201,6 @@ export default {
                 return acc;
             }, {});
             return uniqs;
-        },
-        createNewRequest() {
-            this.trackRequests = window.sessionStorage.setItem("trackRequests", 0);
-            window.sessionStorage.removeItem("spotifyWebAPIAccessToken");
-            window.sessionStorage.removeItem("cachedSpotifyLibrary");
         },
         syncToClashFinder() {
             console.log('lets sync!')
