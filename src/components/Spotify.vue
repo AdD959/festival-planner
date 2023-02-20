@@ -1,9 +1,9 @@
 <template>
     <h2 class="text-sm">Sync with Spotify</h2>
-    <button @click="auth"
-        class="bg-slate-900 py-[6px] px-4 mb-2 rounded-md text-white hover:bg-slate-700 flex justify-center">
+    <button @click="auth" :disabled="disableSpotifyButton" :class="disableSpotifyButton ? 'bg-gray-300 cursor-not-allowed text-gray-400' : 'hover:bg-slate-700'"
+        class="bg-slate-900 py-[6px] px-4 mb-2 rounded-md text-white flex justify-center">
         Connect
-        <img class="w-5 ml-2" src="../assets/Spotify_icon.svg.png" alt="Spotify Icon">
+        <img class="w-5 ml-2" :class="disableSpotifyButton ? 'grayscale opacity-20' : ''" src="../assets/Spotify_icon.svg.png" alt="Spotify Icon">
     </button>
 
     <div class="absolute top-5 right-5 flex items-start gap-1">
@@ -45,7 +45,8 @@ export default {
             lineup: {},
             tokenRequests: 0,
             trackRequests: 0,
-            showJSON: false
+            showJSON: false,
+            disableSpotifyButton: false
         }
     },
     methods: {
@@ -63,6 +64,7 @@ export default {
         checkAuth() {
             const cachedTracks = window.localStorage.getItem("cachedSpotifyLibrary_1");
             if (cachedTracks) {
+                this.disableSpotifyButton = true;
                 console.log('cached tracks have been found.')
                 this.interpret(JSON.parse(cachedTracks))
                 return;
@@ -83,11 +85,11 @@ export default {
                             this.tokenRequests = window.localStorage.getItem("tokenRequests");
                             if (!this.tokenRequests) {
                                 console.log('no previous token request stashed, setting new request...')
-                                window.localStorage.setItem("tokenRequests", 1);
+                                this.updateTokenRequests(true);
                             } else {
                                 console.log('setting new token value...')
                                 console.log('type: ' + typeof(this.tokenRequests))
-                                window.localStorage.setItem("tokenRequests", this.tokenRequests + 1);
+                                this.updateTokenRequests();
                             }
                             var response = xhr.response;
                             var message;
@@ -95,6 +97,7 @@ export default {
                             if (xhr.status == 200) {
                                 window.localStorage.setItem("spotifyWebAPIAccessToken", response.access_token);
                                 this.getArtistData();
+                                this.disableSpotifyButton = true;
                             }
                             else {
                                 message = "Error: " + response.error_description + " (" + response.error + ")";
@@ -116,6 +119,24 @@ export default {
                 }
             }
         },
+        updateTokenRequests(reset) {
+            if (reset) {
+                window.localStorage.setItem("tokenRequests", 1);
+                this.tokenRequests = 1
+            } else {
+                window.localStorage.setItem("tokenRequests", this.tokenRequests + 1);
+                this.tokenRequests++
+            }
+        },
+        updateTrackRequests(reset) {
+            if (reset) {
+                window.localStorage.setItem("trackRequests", 1);
+                this.trackRequests = 1
+            } else {
+                window.localStorage.setItem("trackRequests", this.trackRequests + 1);
+                this.trackRequests++
+            }
+        },
         getArtistData() {
             if (window.localStorage.getItem("spotifyWebAPIAccessToken")) {
                 const accessToken = window.localStorage.getItem("spotifyWebAPIAccessToken");
@@ -123,14 +144,12 @@ export default {
                 let batch = 0;
                 // while (offset < 50) {
                 this.trackRequests = window.localStorage.getItem("trackRequests");
-                console.log('track requets:' + this.trackRequests)
+                console.log('track requests:' + this.trackRequests)
                 if (!this.trackRequests) {
-                    window.localStorage.setItem("trackRequests", 1);
-                    this.trackRequests = 1
+                    this.updateTrackRequests(true)
                 } else {
                     console.log('setting new request value...')
-                    let val = this.trackRequests++
-                    window.localStorage.setItem("trackRequests", val);
+                    this.updateTrackRequests()
                 }
                 fetch(`https://api.spotify.com/v1/me/tracks?limit=50&offset=${offset}`, {
                     method: 'GET',
@@ -155,6 +174,7 @@ export default {
             this.lineup = {}
             this.tokenRequests = 0
             this.trackRequests = 0
+            this.disableSpotifyButton = false
             console.log('%clocal storage deleted', 'color: red;background-color:#FECACA;padding:4px;')
         },
         auth() {
@@ -189,10 +209,10 @@ export default {
             const items = response.items;
             items.forEach(item => {
                 item.track.artists.forEach(artist => {
-                    this.$data.artists.push(artist.name);
+                    this.artists.push(artist.name);
                 });
             });
-            this.$data.results = this.countUnique(this.$data.artists);
+            this.results = this.countUnique(this.artists);
             this.syncToClashFinder();
         },
         countUnique(arr) {

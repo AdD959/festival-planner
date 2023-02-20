@@ -6,7 +6,7 @@ import Spotify from './components/Spotify.vue'
 
 <template>
   <main class="w-full max-w-[1080px] relative">
-    <h1 class="text-5xl font-bold mt-20">Festival Planner</h1>
+    <h1 class="text-5xl font-bold mt-20"><a href="/">Festival Planner</a></h1>
     <!-- <SpotifyConnect /> -->
     <div class="mt-10 flex gap-3">
       <div>
