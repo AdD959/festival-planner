@@ -1,10 +1,16 @@
 <template>
     <h2 class="text-sm">Sync with Spotify</h2>
-    <button @click="auth" :disabled="disableSpotifyButton" :class="disableSpotifyButton ? 'bg-gray-300 cursor-not-allowed text-gray-400' : 'hover:bg-slate-700 text-white bg-slate-900'"
-        class="py-[6px] px-4 mb-2 rounded-md  flex justify-center">
-        Connect
-        <img class="w-5 ml-2" :class="disableSpotifyButton ? 'grayscale opacity-20' : ''" src="../assets/Spotify_icon.svg.png" alt="Spotify Icon">
-    </button>
+    <div class="flex">
+        <button @click="auth" :disabled="disableSpotifyButton" :class="disableSpotifyButton ? 'bg-gray-300 cursor-not-allowed text-gray-400' : 'hover:bg-slate-700 text-white bg-slate-900'"
+            class="py-[6px] px-4 mb-2 rounded-md  flex justify-center rounded-r-none">
+            Connect
+            <img class="w-5 ml-2" :class="disableSpotifyButton ? 'grayscale opacity-20' : ''" src="../assets/Spotify_icon.svg.png" alt="Spotify Icon">
+        </button>
+        <button
+            class="border items-center text-xs py-[5px] rounded-l-none border-l-0 px-2 mb-2 rounded-md flex justify-center" :class="toggleEnabled ? 'bg-slate-900 text-green-500' : 'bg-white'" @click="toggleEnabled = !toggleEnabled">
+            Toggle
+        </button>
+    </div>
 
     <div class="absolute top-5 right-5 flex items-start gap-1">
         <button @click="deleteCache" class="bg-red-200 p-1 text-xs rounded text-red-600 border-black border border-b-2">
@@ -46,7 +52,8 @@ export default {
             tokenRequests: 0,
             trackRequests: 0,
             showJSON: false,
-            disableSpotifyButton: false
+            disableSpotifyButton: false,
+            toggleEnabled: false
         }
     },
     methods: {

@@ -23,7 +23,7 @@ import Spotify from './components/Spotify.vue'
       <div>
         <h2 class="text-sm">Print your clashfinder</h2>
         <button
-          class="border hover:bg-gray-200 border-slate-900 py-[6px] px-4 mb-2 rounded-md flex justify-center">
+          class="border hover:bg-gray-200 border-slate-900 py-[5px] px-4 mb-2 rounded-md flex justify-center">
           Print
         </button>
       </div>
