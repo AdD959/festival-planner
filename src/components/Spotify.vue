@@ -7,7 +7,7 @@
             <img class="w-5 ml-2" :class="disableSpotifyButton ? 'grayscale opacity-20' : ''" src="../assets/Spotify_icon.svg.png" alt="Spotify Icon">
         </button>
         <button
-            class="border items-center text-xs py-[5px] rounded-l-none border-l-0 px-2 mb-2 rounded-md flex justify-center" :class="toggleEnabled ? 'bg-slate-900 text-green-500' : 'bg-white'" @click="toggleEnabled = !toggleEnabled">
+            class="border items-center text-xs py-[5px] rounded-l-none border-l-0 px-2 mb-2 rounded-md flex justify-center" :class="toggleEnabled ? 'bg-slate-900 text-green-500' : 'bg-white'" @click="toggleButton">
             Toggle
         </button>
     </div>
@@ -41,6 +41,7 @@
 <script>
 
 export default {
+    emits: ['spotifySync'],
     mounted() {
         this.init();
     },
@@ -58,7 +59,6 @@ export default {
     },
     methods: {
         init() {
-            console.log('init called')
             this.tokenRequests = window.localStorage.getItem("tokenRequests");
             this.trackRequests = window.localStorage.getItem("trackRequests");
 
@@ -67,6 +67,10 @@ export default {
             
             this.results = JSON.parse(JSON.stringify(this.results))
             this.checkAuth()
+        },
+        toggleButton() {
+            this.$emit('spotifySync', this.results)
+            this.toggleEnabled = !this.toggleEnabled
         },
         checkAuth() {
             const cachedTracks = window.localStorage.getItem("cachedSpotifyLibrary_1");
@@ -220,7 +224,7 @@ export default {
                 });
             });
             this.results = this.countUnique(this.artists);
-            this.syncToClashFinder();
+            this.$emit('spotifySync', this.results)
         },
         countUnique(arr) {
             var uniqs = arr.reduce((acc, val) => {
@@ -228,9 +232,6 @@ export default {
                 return acc;
             }, {});
             return uniqs;
-        },
-        syncToClashFinder() {
-            console.log('lets sync!')
         },
         async generateCodeChallenge(codeVerifier) {
             var digest = await crypto.subtle.digest("SHA-256",

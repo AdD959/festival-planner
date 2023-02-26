@@ -2,6 +2,7 @@
 import SpotifyConnect from './components/SpotifyConnect.vue'
 import Clashfinder from './components/Clashfinder.vue'
 import Spotify from './components/Spotify.vue'
+import Test from './components/glastonbury/Test.vue'
 </script>
 
 <template>
@@ -18,11 +19,11 @@ import Spotify from './components/Spotify.vue'
         </select>
       </div>
       <div>
-        <Spotify />
+        <Spotify @spotify-sync="syncSpotify"/>
       </div>
       <div>
         <h2 class="text-sm">Print your clashfinder</h2>
-        <button
+        <button @click="syncSpotify"
           class="border hover:bg-gray-200 border-slate-900 py-[5px] px-4 mb-2 rounded-md flex justify-center">
           Print
         </button>
@@ -42,11 +43,14 @@ export default {
     return {
       festival: null,
       festivalData: [],
-      error: null
+      error: null,
+      timelines: [],
+      containers: [],
+      count: 0
     }
   },
   mounted() {
-    // this.switchClashfinder('glastonbury-2022')
+    this.switchClashfinder('glastonbury-2022')
   },
   methods: {
     async switchClashfinder(input) {
@@ -61,12 +65,27 @@ export default {
           this.error = null
           return response.json()
         })
-        .then(json => this.createTable(json))
+        .then(json => { this.createTable(json); return json })
         .catch(error => {
           this.error = `Sorry, there seems to be a bug. Please report this to the developer.`
           console.log(error)
         });
     },
+    syncSpotify(spotifyArtists) {
+      let spotifyArr = Object.keys(spotifyArtists)
+      const matches = []
+
+      this.festivalData.forEach(day =>
+        day.Artists.forEach(artist => {
+          spotifyArr.forEach(s_artist => {
+            const s_artist_upper = s_artist.toUpperCase()
+            if (s_artist_upper.includes(artist.content)) {
+              matches.push(artist.id)
+            }
+          })
+        }))
+        this.timelines.forEach(t => t.setSelection(matches))
+      },
     createTable(json) {
       var groups = [
         { id: 1, content: 'Pyramid' },
@@ -104,12 +123,10 @@ export default {
         }
       ]
 
-      const timelines = []
-      const containers = []
       json.forEach((day, i) => {
-        containers.push(document.getElementById(`visualization_${i}`))
-        const timeline = new vis.Timeline(containers[i], day.Artists, groups, options[i])
-        timelines.push(timeline)
+        this.containers.push(document.getElementById(`visualization_${i}`))
+        const timeline = new vis.Timeline(this.containers[i], day.Artists, groups, options[i])
+        this.timelines.push(timeline)
       })
     }
   },
