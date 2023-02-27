@@ -5,10 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festival Planner</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <link href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+      #visualization {
+        width: 600px;
+        border: 1px solid lightgray;
+      }
+    </style>
   </head>
-  <body class="h-full">
-    <div id="app"></div>
+  <body class="p-5">
+  <img src="src/assets/glasto.png" alt="glastonbury pyramid stage" class="w-full absolute opacity-20">
+    <div class="w-full flex justify-center relative" id="app"></div> 
+    <!-- <div id="visualization" class="mt-10"></div> -->
+
+    <script type="text/javascript">
+      // DOM element where the Timeline will be attached
+      
+    </script>    
     <script type="module" src="/src/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/oauth-pkce@0.0.2/dist/oauth-pkce.min.js" async defer></script>;   
+    <script src="https://cdn.jsdelivr.net/npm/oauth-pkce@0.0.2/dist/oauth-pkce.min.js" async defer></script>
   </body>
 </html>
