@@ -12,14 +12,15 @@ import Test from './components/glastonbury/Test.vue'
     <div class="mt-10 flex gap-3">
       <div>
         <h2 class="text-sm">Choose your festival</h2>
-        <select class="p-2 bg-blue-200 mb-2 cursor-pointer rounded-md" ref="selector" v-model="festival" @change="switchClashfinder()">
+        <select class="p-2 bg-blue-200 mb-2 cursor-pointer rounded-md" ref="selector" v-model="festival"
+          @change="switchClashfinder()">
           <option value="null" disabled selected hidden>Select</option>
           <option value="glastonbury-2022" selected>Glastonbury Festival 2022</option>
           <option value="leeds-2022">Leeds Festival 2022</option>
         </select>
       </div>
       <div>
-        <Spotify @spotify-sync="syncSpotify"/>
+        <Spotify @spotify-sync="syncSpotify" />
       </div>
       <div>
         <h2 class="text-sm">Print your clashfinder</h2>
@@ -29,12 +30,12 @@ import Test from './components/glastonbury/Test.vue'
         </button>
       </div>
     </div>
-    <p class="text-red-500">{{  error  }}</p>
+    <p class="text-red-500">{{ error }}</p>
     <!-- <Clashfinder :festivalData="festivalData" :festival="festival" :error="error" /> -->
     <div id="visualization_0" class="mb-2"></div>
     <div id="visualization_1" class="mb-2"></div>
     <div id="visualization_2" class="mb-2"></div>
-  </main>
+</main>
 </template>
 
 <script>
@@ -46,7 +47,8 @@ export default {
       error: null,
       timelines: [],
       containers: [],
-      count: 0
+      count: 0,
+      datasets: [],
     }
   },
   mounted() {
@@ -84,8 +86,17 @@ export default {
             }
           })
         }))
-        this.timelines.forEach(t => t.setSelection(matches))
-      },
+      this.timelines.forEach((t,i) => {
+        t.setSelection(matches);
+        t.on('itemover', function (event) {
+          var itemId = event.item;
+          console.log(this.$data.datasets)
+          var item = this.datasets[i].get(itemId);
+          item.className = 'myClass';
+          items.update(item);
+        });
+      })
+    },
     createTable(json) {
       var groups = [
         { id: 1, content: 'Pyramid' },
@@ -124,8 +135,9 @@ export default {
       ]
 
       json.forEach((day, i) => {
+        let dataset = new vis.DataSet(day.Artists)
         this.containers.push(document.getElementById(`visualization_${i}`))
-        const timeline = new vis.Timeline(this.containers[i], day.Artists, groups, options[i])
+        const timeline = new vis.Timeline(this.containers[i], dataset, groups, options[i])
         this.timelines.push(timeline)
       })
     }

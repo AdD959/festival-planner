@@ -1,13 +1,16 @@
 <template>
     <h2 class="text-sm">Sync with Spotify</h2>
     <div class="flex">
-        <button @click="auth" :disabled="disableSpotifyButton" :class="disableSpotifyButton ? 'bg-gray-300 cursor-not-allowed text-gray-400' : 'hover:bg-slate-700 text-white bg-slate-900'"
+        <button @click="auth" :disabled="disableSpotifyButton"
+            :class="disableSpotifyButton ? 'bg-gray-300 cursor-not-allowed text-gray-400' : 'hover:bg-slate-700 text-white bg-slate-900'"
             class="py-[6px] px-4 mb-2 rounded-md  flex justify-center rounded-r-none">
             Connect
-            <img class="w-5 ml-2" :class="disableSpotifyButton ? 'grayscale opacity-20' : ''" src="../assets/Spotify_icon.svg.png" alt="Spotify Icon">
+            <img class="w-5 ml-2" :class="disableSpotifyButton ? 'grayscale opacity-20' : ''"
+                src="../assets/Spotify_icon.svg.png" alt="Spotify Icon">
         </button>
         <button
-            class="border items-center text-xs py-[5px] rounded-l-none border-l-0 px-2 mb-2 rounded-md flex justify-center" :class="toggleEnabled ? 'bg-slate-900 text-green-500' : 'bg-white'" @click="toggleButton">
+            class="border items-center text-xs py-[5px] rounded-l-none border-l-0 px-2 mb-2 rounded-md flex justify-center"
+            :class="toggleEnabled ? 'bg-slate-900 text-green-500' : 'bg-white'" @click="toggleButton">
             Toggle
         </button>
     </div>
@@ -26,7 +29,8 @@
             Track Requests:
             <span class=" text-green-600 bold">{{ trackRequests }}</span>
         </div>
-        <button @click="showJSON = !showJSON" class="bg-blue-200 p-1 text-xs rounded border border-b-2 border-black" :class="showJSON ? 'bg-black text-white ' : 'text-blue-600'">Show/Hide Track
+        <button @click="showJSON = !showJSON" class="bg-blue-200 p-1 text-xs rounded border border-b-2 border-black"
+            :class="showJSON ? 'bg-black text-white ' : 'text-blue-600'">Show/Hide Track
             Response
         </button>
     </div>
@@ -35,7 +39,7 @@
         <div class="max-h-28 max-w-sm overflow-scroll">
             {{ results }}
         </div>
-    </div>
+</div>
 </template>
 
 <script>
@@ -64,7 +68,7 @@ export default {
 
             this.trackRequests = this.trackRequests ? this.trackRequests : 0;
             this.tokenRequests = this.tokenRequests ? this.tokenRequests : 0;
-            
+
             this.results = JSON.parse(JSON.stringify(this.results))
             this.checkAuth()
         },
@@ -87,11 +91,11 @@ export default {
                     console.log('access token not found, checking if the page returned contains callback code...')
                     var args = new URLSearchParams(window.location.search);
                     var code = args.get("code");
-    
+
                     if (code) {
                         console.log('callback code found')
                         var xhr = new XMLHttpRequest();
-    
+
                         xhr.onload = function () {
                             this.tokenRequests = window.localStorage.getItem("tokenRequests");
                             if (!this.tokenRequests) {
@@ -99,12 +103,12 @@ export default {
                                 this.updateTokenRequests(true);
                             } else {
                                 console.log('setting new token value...')
-                                console.log('type: ' + typeof(this.tokenRequests))
+                                console.log('type: ' + typeof (this.tokenRequests))
                                 this.updateTokenRequests();
                             }
                             var response = xhr.response;
                             var message;
-    
+
                             if (xhr.status == 200) {
                                 window.localStorage.setItem("spotifyWebAPIAccessToken", response.access_token);
                                 this.getArtistData();
@@ -113,7 +117,7 @@ export default {
                             else {
                                 message = "Error: " + response.error_description + " (" + response.error + ")";
                             }
-    
+
                             document.getElementById("result").innerHTML = message;
                         }.bind(this);
                         xhr.responseType = 'json';
@@ -144,8 +148,8 @@ export default {
                 window.localStorage.setItem("trackRequests", 1);
                 this.trackRequests = 1
             } else {
-                window.localStorage.setItem("trackRequests", this.trackRequests + 1);
                 this.trackRequests++
+                window.localStorage.setItem("trackRequests", this.trackRequests);
             }
         },
         getArtistData() {
@@ -153,29 +157,32 @@ export default {
                 const accessToken = window.localStorage.getItem("spotifyWebAPIAccessToken");
                 let offset = 0;
                 let batch = 0;
-                // while (offset < 50) {
-                this.trackRequests = window.localStorage.getItem("trackRequests");
-                console.log('track requests:' + this.trackRequests)
-                if (!this.trackRequests) {
-                    this.updateTrackRequests(true)
-                } else {
-                    console.log('setting new request value...')
-                    this.updateTrackRequests()
-                }
-                fetch(`https://api.spotify.com/v1/me/tracks?limit=50&offset=${offset}`, {
-                    method: 'GET',
-                    headers: {
-                        "Content-Type": 'application/json',
-                        'Authorization': `Bearer ${accessToken}`
-                    },
-                })
-                    .then(response => response.json())
-                    .then(res => { window.localStorage.setItem(`cachedSpotifyLibrary_${batch}`, JSON.stringify(res)); return res; })
-                    .then(response => { this.interpret(response); })
-                    .catch(err => console.error(err));
-                batch++;
-                offset += 50;
+                let batches = []
+                // while (offset < 400) {
+                    this.trackRequests = window.localStorage.getItem("trackRequests");
+                    console.log('track requests:' + this.trackRequests)
+                    if (!this.trackRequests) {
+                        this.updateTrackRequests(true)
+                    } else {
+                        console.log('setting new request value...')
+                        this.updateTrackRequests()
+                    }
+                    fetch(`https://api.spotify.com/v1/me/tracks?limit=50&offset=${offset}`, {
+                        method: 'GET',
+                        headers: {
+                            "Content-Type": 'application/json',
+                            'Authorization': `Bearer ${accessToken}`
+                        },
+                    })
+                        .then(response => response.json())
+                        .then(res => { window.localStorage.setItem(`cachedSpotifyLibrary_${batch}`, JSON.stringify(res)); return res; })
+                        .then(response => { this.interpret(response); })
+                        .catch(err => console.error(err));
+                    batch++;
+                    offset += 50;
                 // }
+                
+                // 
             }
         },
         deleteCache() {
