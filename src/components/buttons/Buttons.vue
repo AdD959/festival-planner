@@ -6,7 +6,7 @@ import Print from './Print.vue'
 
 <template>
     <div class="mt-10 mb-5 flex gap-3">
-        <SelectAFestival/>
+        <SelectAFestival @festivalSelect="this.$emit('festivalSelect')"/>
         <ConnectToSpotify/>
         <Print />
     </div>

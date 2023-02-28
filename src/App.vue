@@ -7,7 +7,7 @@ import TestBar from './components/development/TestBar.vue'
 <template>
   <main class="relative text-skin-inverted max-w-[1080px]">
     <h1 class="text-5xl font-bold mt-20">Festival Planner</h1>
-    <Buttons />
+    <Buttons @festivalSelect="festivalSelected"/>
   </main>
   <TestBar v-show="env === 'dev'" />
 </template>
@@ -22,5 +22,10 @@ export default {
   components: {
     Buttons, TestBar
   },
+  methods: {
+    festivalSelected() {
+      console.log('test')
+    }
+  }
 }
 </script>
