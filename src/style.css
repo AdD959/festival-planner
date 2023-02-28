@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --base: #E8F1F2;
+    --muted: #000000;
+    --inverted: #000000;
+    --quaternary: #B3EFB2;
+    --tertiary: #7A9E7E;
+    --accent: #EE6352;
+}
+.theme-1 {
+    --base: #E8F1F2;
+    --muted: #000000;
+    --inverted: #000000;
+    --quaternary: #EF767A;
+    --tertiary: #6457A6;
+    --accent: #23F0C7;
+}
+/* --base: #E8F1F2;
+--muted: #7D7ABC;
+--inverted: #FFE347;
+--quaternary: #EF767A;
+--tertiary: #6457A6;
+--accent: #23F0C7; */

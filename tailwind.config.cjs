@@ -6,6 +6,16 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colors: {
+      skin: {
+        base: 'var(--base)',
+        muted: 'var(--muted)',
+        inverted: 'var(--inverted)',
+        accent: 'var(--accent)',
+        tertiary: 'var(--tertiary)',
+        quaternary: 'var(--quaternary)',
+      },
+    },
   },
   plugins: [],
 }
