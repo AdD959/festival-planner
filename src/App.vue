@@ -23,8 +23,8 @@ export default {
     Buttons, TestBar
   },
   methods: {
-    festivalSelected() {
-      console.log('test')
+    festivalSelected(festival) {
+      console.log(festival)
     }
   }
 }

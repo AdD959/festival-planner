@@ -6,7 +6,7 @@ import Print from './Print.vue'
 
 <template>
     <div class="mt-10 mb-5 flex gap-3">
-        <SelectAFestival @festivalSelect="this.$emit('festivalSelect')"/>
+        <SelectAFestival @festivalSelect="festivalSelect"/>
         <ConnectToSpotify/>
         <Print />
     </div>
@@ -16,6 +16,11 @@ import Print from './Print.vue'
 export default {
   components: {
     SelectAFestival, ConnectToSpotify, Print
+  },
+  methods: {
+    festivalSelect(festival) {
+      this.$emit('festivalSelect', festival)
+    }
   }
 }
 </script>
