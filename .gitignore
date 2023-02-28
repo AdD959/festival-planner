@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 glastonbury2022.xlsx
+.env
+.env.local
