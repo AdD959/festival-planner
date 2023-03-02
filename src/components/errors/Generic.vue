@@ -1,11 +1,14 @@
 <template>
-    <div class="p-2 rounded-md bg-red-300 inline-block">
-        <p class="text-red-600">{{ message }}</p>
+    <div v-show="showError" class="p-2 rounded-md text-skin-quaternary inline-block">
+        <p class="text-red-600">{{ msg }}</p>
     </div>
 </template>
 
   <script>
     export default {
-      props: { message: String },
+      props: { msg: String, showError: Boolean },
+      updated() {
+        console.log(this.showError)
+      }
     }
   </script>
