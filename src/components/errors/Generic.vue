@@ -7,8 +7,5 @@
   <script>
     export default {
       props: { msg: String, showError: Boolean },
-      updated() {
-        console.log(this.showError)
-      }
     }
   </script>

@@ -3,9 +3,6 @@
 </script>
 
 <template>
-    <p>
-        THIS IS THE CLASHFINDER FOR: {{ festival }}
-    </p>
     <Error msg="Sorry, this clashfinder isn't currently available." :showError="error"/>
 </template>
 
@@ -14,17 +11,11 @@ export default {
     props: { festival: String },
     data() {
         return {
-            previousSelections: [],
             error: false,
         }
     },
     updated() {
-        if (!this.previousSelections.includes(this.festival)) {
-            this.previousSelections.push(this.festival)
-            this.requestClashfinder(this.festival)
-        } else {
-
-        }
+        this.requestClashfinder(this.festival)
     },
     methods: {
         async requestClashfinder() {
