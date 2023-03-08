@@ -1,10 +1,12 @@
 <script setup>
 import Error from '../errors/Generic.vue'
+import Loading from '../animations/Loading.vue'
 </script>
 
 <template>
     <div id="container"></div>
     <Error msg="Sorry, this clashfinder isn't currently available." :showError="error" />
+    <Loading :show="loading"/>
 </template>
 
 <script>
@@ -15,6 +17,7 @@ export default {
             error: false,
             timelines: [],
             containers: [],
+            loading: false
         }
     },
     updated() {
@@ -58,24 +61,24 @@ export default {
                 {
                     min: '2022-02-16 10:30:00',
                     max: '2022-02-17 01:00:00',
-                    zoomFriction: 50,
-                    zoomMin: 3000000,
+                    zoomFriction: 75,
+                    zoomMin: 10000000,
                     multiselect: true,
                     showTooltips: true,
                 },
                 {
                     min: '2022-02-17 10:30:00',
                     max: '2022-02-18 01:00:00',
-                    zoomFriction: 50,
-                    zoomMin: 3000000,
+                    zoomFriction: 75,
+                    zoomMin: 10000000,
                     multiselect: true,
                     showTooltips: true,
                 },
                 {
                     min: '2022-02-18 10:30:00',
                     max: '2022-02-19 01:00:00',
-                    zoomFriction: 50,
-                    zoomMin: 3000000,
+                    zoomFriction: 75,
+                    zoomMin: 10000000,
                     multiselect: true,
                     showTooltips: true,
                 }
@@ -84,8 +87,15 @@ export default {
             json.forEach((day, i) => {
                 let dataset = new vis.DataSet(day.Artists)
                 let container = document.querySelector(`#${this.festival}`)
+                container.classList.add('h-0', 'overflow-hidden')
                 this.containers.push(container)
                 const timeline = new vis.Timeline(this.containers[i], dataset, groups, options[i])
+                if (i === 0) { this.loading = true }
+                timeline.on("currentTimeTick", () => {
+                    this.containers[i].classList.remove('h-0')
+                    timeline.off("currentTimeTick")
+                    this.loading = false
+                })
                 this.timelines.push(timeline)
             })
         }
