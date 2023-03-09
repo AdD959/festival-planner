@@ -21,7 +21,21 @@ export default {
         }
     },
     updated() {
-        this.requestClashfinder(this.festival)
+        console.log('updated')
+        if (document.querySelector(`#${this.festival}`)) {
+            document.querySelectorAll('#container > div').forEach(festival => {
+                if (festival.id !== this.festival) { 
+                    console.log('adding hidden...')
+                    festival.classList.add('hidden') 
+                } else {
+                    console.log('removing hidden...')
+                    festival.classList.remove('hidden')
+                }  
+            })
+        } else {
+            document.querySelectorAll('#container > div').forEach(festival => { festival.classList.add('hidden') })
+            this.requestClashfinder()
+        }
     },
     methods: {
         async requestClashfinder() {
