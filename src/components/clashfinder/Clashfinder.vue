@@ -4,9 +4,10 @@ import Loading from '../animations/Loading.vue'
 </script>
 
 <template>
-    <div id="container"></div>
-    <Error msg="Sorry, this clashfinder isn't currently available." :showError="error" />
-    <Loading :show="loading"/>
+    <div id="container">
+        <Error v-show="showError" msg="Sorry, this clashfinder isn't currently available." />
+        <Loading :show="loading"/>
+    </div>
 </template>
 
 <script>
@@ -20,20 +21,8 @@ export default {
             loading: false
         }
     },
-    updated() {
-        console.log('updated')
-        if (document.querySelector(`#${this.festival}`)) {
-            document.querySelectorAll('#container > div').forEach(festival => {
-                if (festival.id !== this.festival) { 
-                    console.log('adding hidden...')
-                    festival.classList.add('hidden') 
-                } else {
-                    console.log('removing hidden...')
-                    festival.classList.remove('hidden')
-                }  
-            })
-        } else {
-            document.querySelectorAll('#container > div').forEach(festival => { festival.classList.add('hidden') })
+    watch: {
+        festival() {
             this.requestClashfinder()
         }
     },
