@@ -5,52 +5,62 @@ import Loading from '../animations/Loading.vue'
 
 <template>
     <div id="container">
+        <div v-for="festival in festivals" :id="festival">
+            <Error class="error hidden" msg="Sorry, this clashfinder isn't currently available." />
+        </div>
     </div>
     <Loading :show="loading"/>
-    <Error v-show="error" msg="Sorry, this clashfinder isn't currently available." />
 </template>
 
 <script>
 export default {
-    props: { festival: String },
+    props: { festival: String, festivals: Array },
     data() {
         return {
-            error: false,
             timelines: [],
             containers: [],
-            loading: false
+            loading: false,
+            target: null
         }
     },
     watch: {
         festival() {
-            this.requestClashfinder()
+            document.querySelectorAll('#container > div').forEach(x => x.classList.add('hidden'))
+            this.target = document.querySelector(`#${this.festival}`)
+            if (this.target.querySelector(':scope > *:not(.error)') !== null) {
+                this.target.classList.remove('hidden')
+            } else {
+                this.target.classList.remove('hidden')
+                this.requestClashfinder()
+            }
         }
     },
     methods: {
         async requestClashfinder() {
             // const url = input ? input : this.festival
+            let errorStatus = false
             this.festivalData = await fetch(`${this.festival}.json`)
                 .then(response => {
+                    let error = this.target.querySelector('.error')
                     if (response.ok) {
-                        this.error = false
+                        this.target.classList.remove('hidden')
+                        error.classList.add('hidden')
                         return response.json()
                     }
-                    this.error = true
+                    errorStatus = true
+                    error.classList.remove('hidden')
                 })
                 .then(json => {
-                    if (!this.error) {
+                    if (!errorStatus) {
                         this.createTable(json)
                     }
                 })
         },
         createTable(json) {
-            if (document.querySelector(`#${this.festival}`)) {
-                return
-            } else {
-                const div = document.createElement('div')
-                div.id = this.festival
-                document.querySelector('#container').appendChild(div)
-            }
+            const div = document.createElement('div')
+            div.id = this.festival
+            document.querySelector('#container').appendChild(div)
+
             var groups = [
                 { id: 1, content: 'Pyramid' },
                 { id: 2, content: 'Other' },

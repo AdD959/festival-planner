@@ -1,5 +1,5 @@
 <script setup>
-    import ButtonShadow from './ButtonShadow.vue'
+import ButtonShadow from './ButtonShadow.vue'
 </script>
 
 <template>
@@ -7,11 +7,10 @@
         <label for="select-a-festival" class="block text-xs">Select your festival</label>
         <div class="relative inline-block group text-skin-inverted border-2 border-skin-muted">
             <ButtonShadow />
-            <select name="select-a-festival" class="w-full h-full p-[9.5px] bg-skin-accent cursor-pointer outline-none" v-model="festival">
+            <select name="select-a-festival" class="w-full h-full p-[9.5px] bg-skin-accent cursor-pointer outline-none"
+                v-model="selectedFestival">
                 <option value="null" disabled selected hidden>Select</option>
-                <option value="glastonbury-2022" selected>Glastonbury Festival 2022</option>
-                <option value="glastonbury-2021" >Glastonbury Festival 2021</option>
-                <option value="leeds-2022">Leeds Festival 2022</option>
+                <option v-for="(name, i) in formattedFestivals" :value="this.festivals[i]">{{ name }}</option>
             </select>
         </div>
     </div>
@@ -21,29 +20,23 @@
 export default {
     data() {
         return {
-            festival: null
+            selectedFestival: null,
         }
     },
+    props: ['festivals'],
     emits: ['festivalSelect', 'requestClashfinder'],
+    computed: {
+        formattedFestivals() {
+            return this.festivals.map(festival => {
+                return festival.split('-').map(word => {
+                    return word.charAt(0).toUpperCase() + word.slice(1)
+                }).join(' ')
+            })
+        }
+    },
     watch: {
-        festival() {
-            console.log('festival selected: ' + this.festival)
-            if (document.querySelector(`#${this.festival}`)) {
-                document.querySelectorAll('#container > div').forEach(festival => {
-                    console.log('festivals: ' + festival.id)
-                    if (festival.id !== this.festival) { 
-                        console.log('adding hidden...')
-                        festival.classList.add('hidden') 
-                    } else {
-                        console.log('removing hidden for ' + festival.id)
-                        festival.classList.remove('hidden')
-                    }  
-                })
-            } else {
-                console.log('festival name not found in dom');
-                document.querySelectorAll('#container > div').forEach(festival => { festival.classList.add('hidden') })
-                this.$emit('festivalSelect', this.festival)
-            }
+        selectedFestival() {
+            this.$emit('festivalSelect', this.selectedFestival)
         }
     }
 }

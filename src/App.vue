@@ -9,9 +9,9 @@ import Clashfinder from './components/clashfinder/Clashfinder.vue'
   <div class="flex flex-col w-full">
     <div class="relative text-skin-inverted max-w-[1080px]">
       <h1 class="text-5xl font-bold mt-20">Festival Planner</h1>
-      <Buttons @festivalSelect="festivalSelected"/>
+      <Buttons @festivalSelect="festivalSelected" :festivals="festivals"/>
     </div>
-    <Clashfinder :festival="currentFestival"/>
+    <Clashfinder :festival="currentFestival" :festivals="festivals"/>
   </div>
   <TestBar v-show="env === 'dev'" />
 </template>
@@ -22,6 +22,11 @@ export default {
     return {
       env: import.meta.env.VITE_ENVIRONMENT,
       currentFestival: '',
+      festivals: [
+        'glastonbury-2022',
+        'glastonbury-2021',
+        'leeds-2023'
+      ]
     }
   },
   components: {

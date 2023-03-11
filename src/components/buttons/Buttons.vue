@@ -6,7 +6,7 @@ import Print from './Print.vue'
 
 <template>
     <div class="mt-10 mb-5 flex gap-3">
-        <SelectAFestival @festivalSelect="festivalSelect"/>
+        <SelectAFestival @festivalSelect="festivalSelect" :festivals="festivals"/>
         <ConnectToSpotify/>
         <Print />
     </div>
@@ -14,6 +14,7 @@ import Print from './Print.vue'
 
 <script>
 export default {
+  props: ['festivals'],
   components: {
     SelectAFestival, ConnectToSpotify, Print
   },
