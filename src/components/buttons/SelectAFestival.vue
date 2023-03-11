@@ -10,6 +10,7 @@
             <select name="select-a-festival" class="w-full h-full p-[9.5px] bg-skin-accent cursor-pointer outline-none" v-model="festival">
                 <option value="null" disabled selected hidden>Select</option>
                 <option value="glastonbury-2022" selected>Glastonbury Festival 2022</option>
+                <option value="glastonbury-2021" >Glastonbury Festival 2021</option>
                 <option value="leeds-2022">Leeds Festival 2022</option>
             </select>
         </div>
@@ -26,9 +27,10 @@ export default {
     emits: ['festivalSelect', 'requestClashfinder'],
     watch: {
         festival() {
+            console.log('festival selected: ' + this.festival)
             if (document.querySelector(`#${this.festival}`)) {
                 document.querySelectorAll('#container > div').forEach(festival => {
-                    console.log(festival.id)
+                    console.log('festivals: ' + festival.id)
                     if (festival.id !== this.festival) { 
                         console.log('adding hidden...')
                         festival.classList.add('hidden') 
@@ -38,6 +40,7 @@ export default {
                     }  
                 })
             } else {
+                console.log('festival name not found in dom');
                 document.querySelectorAll('#container > div').forEach(festival => { festival.classList.add('hidden') })
                 this.$emit('festivalSelect', this.festival)
             }

@@ -5,9 +5,9 @@ import Loading from '../animations/Loading.vue'
 
 <template>
     <div id="container">
-        <Error v-show="showError" msg="Sorry, this clashfinder isn't currently available." />
-        <Loading :show="loading"/>
     </div>
+    <Loading :show="loading"/>
+    <Error v-show="error" msg="Sorry, this clashfinder isn't currently available." />
 </template>
 
 <script>
