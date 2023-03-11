@@ -18,7 +18,6 @@ export default {
     data() {
         return {
             timelines: [],
-            containers: [],
             loading: false,
             target: null
         }
@@ -97,15 +96,16 @@ export default {
                 }
             ]
 
+            let containers = []
             json.forEach((day, i) => {
                 let dataset = new vis.DataSet(day.Artists)
                 let container = document.querySelector(`#${this.festival}`)
                 container.classList.add('h-0', 'overflow-hidden')
-                this.containers.push(container)
-                const timeline = new vis.Timeline(this.containers[i], dataset, groups, options[i])
+                containers.push(container)
+                const timeline = new vis.Timeline(containers[i], dataset, groups, options[i])
                 if (i === 0) { this.loading = true }
                 timeline.on("currentTimeTick", () => {
-                    this.containers[i].classList.remove('h-0')
+                    containers[i].classList.remove('h-0')
                     timeline.off("currentTimeTick")
                     this.loading = false
                 })
