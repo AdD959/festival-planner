@@ -57,7 +57,10 @@ export default {
         },
         createTable(json) {
             const div = document.createElement('div')
+            const div_inner = document.createElement('div')
             div.id = this.festival
+            div_inner.classList.add('inner')
+            div.appendChild(div_inner)
             document.querySelector('#container').appendChild(div)
 
             var groups = [
@@ -93,23 +96,50 @@ export default {
                     zoomMin: 10000000,
                     multiselect: true,
                     showTooltips: true,
-                }
+                },
             ]
 
-            let containers = []
+            let container = document.querySelector(`#${this.festival}`)
+            container.classList.add('h-0', 'overflow-hidden')
+            container
             json.forEach((day, i) => {
+                // create new dataset
                 let dataset = new vis.DataSet(day.Artists)
-                let container = document.querySelector(`#${this.festival}`)
-                container.classList.add('h-0', 'overflow-hidden')
-                containers.push(container)
-                const timeline = new vis.Timeline(containers[i], dataset, groups, options[i])
-                if (i === 0) { this.loading = true }
+                const timeline = new vis.Timeline(container, dataset, groups, options[i])
+
+                // create tabs
+                const tab = document.createElement('button')
+                tab.classList.add('flex-1','flex','justify-center','p-4','bg-skin-accent')
+                tab.innerHTML = day.Day
+                document.querySelectorAll(`#${this.festival} > .vis-timeline`)[i].classList.add(`${day.Day}`)
+                
+                if (i > 0) {
+                    document.querySelectorAll(`#${this.festival} > .vis-timeline`)[i].classList.add('hidden')
+                    // document.querySelectorAll(`#${this.festival} > .vis-loading-screen`)[i].classList.add('hidden')
+                }
+
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll(`#${this.festival} > .vis-timeline:not(.${day.Day})`).forEach(x => x.classList.add('hidden'))
+                    document.querySelector(`#${this.festival} > .${day.Day}`).classList.remove('hidden')
+                })
+
+                if (i === 0) { 
+                    this.loading = true
+                    const tabContainer = document.createElement('div')
+                    tabContainer.id = `tabContainer_${this.festival}`
+                    tabContainer.classList.add('flex','w-full','gap-2','mb-1')
+                    container.prepend(tabContainer)
+                }
+                
+                document.querySelector(`#tabContainer_${this.festival}`).appendChild(tab)
+
                 timeline.on("currentTimeTick", () => {
-                    containers[i].classList.remove('h-0')
+                    container.classList.remove('h-0')
                     timeline.off("currentTimeTick")
                     this.loading = false
                 })
                 this.timelines.push(timeline)
+
             })
         }
     }
