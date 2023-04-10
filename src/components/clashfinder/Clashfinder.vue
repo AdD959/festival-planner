@@ -7,6 +7,10 @@ import Loading from '../animations/Loading.vue'
     <div id="container">
         <div v-for="festival in festivals" :id="festival">
             <Error class="error hidden" msg="Sorry, this clashfinder isn't currently available." />
+            <div class="clashfinder">
+                <div class="tabs flex gap-1 mb-1"></div>
+                <div class="table w-full"></div>
+            </div>
         </div>
     </div>
     <Loading :show="loading"/>
@@ -19,18 +23,23 @@ export default {
         return {
             timelines: [],
             loading: false,
-            target: null
+            target: null,
+            clashfinder: null,
+            table: null,
+            tabs: null
         }
     },
     watch: {
         festival() {
             document.querySelectorAll('#container > div').forEach(x => x.classList.add('hidden'))
             this.target = document.querySelector(`#${this.festival}`)
-            if (this.target.querySelector(':scope > *:not(.error)') !== null) {
-                this.target.classList.remove('hidden')
+            this.clashfinder = this.target.querySelector(`.clashfinder`)
+            this.table = this.target.querySelector(`.table`)
+            this.tabs = this.target.querySelector(`.tabs`)
+            if (this.table.innerHTML === "") {
+                this.requestClashfinder().then(() => this.target.classList.remove('hidden'))
             } else {
                 this.target.classList.remove('hidden')
-                this.requestClashfinder()
             }
         }
     },
@@ -55,14 +64,26 @@ export default {
                     }
                 })
         },
-        createTable(json) {
-            const div = document.createElement('div')
-            const div_inner = document.createElement('div')
-            div.id = this.festival
-            div_inner.classList.add('inner')
-            div.appendChild(div_inner)
-            document.querySelector('#container').appendChild(div)
+        selectTab(day, tabIndex) {
+            this.tabs.querySelectorAll('.tabs > button').forEach((tab,i) => {
+                if (i !== tabIndex) {
+                    tab.classList.remove('border-2')
+                } else {
+                    tab.classList.add('border-2')
+                }
+            })
 
+            let tables = this.table.querySelectorAll('.vis-timeline')
+            tables.forEach(table => {
+                if (table.classList.contains(day)) {
+                    table.classList.remove('hidden')
+                } else {
+                    table.classList.add('hidden')
+                }
+            })
+
+        },
+        createTable(json) {
             var groups = [
                 { id: 1, content: 'Pyramid' },
                 { id: 2, content: 'Other' },
@@ -99,47 +120,30 @@ export default {
                 },
             ]
 
-            let container = document.querySelector(`#${this.festival}`)
-            container.classList.add('h-0', 'overflow-hidden')
-            container
+            this.clashfinder.classList.add('h-0', 'overflow-hidden')
             json.forEach((day, i) => {
-                // create new dataset
                 let dataset = new vis.DataSet(day.Artists)
-                const timeline = new vis.Timeline(container, dataset, groups, options[i])
+                const timeline = new vis.Timeline(this.table, dataset, groups, options[i])
 
-                // create tabs
-                const tab = document.createElement('button')
-                tab.classList.add('flex-1','flex','justify-center','p-4','bg-skin-accent')
+                let tab = document.createElement('button')
                 tab.innerHTML = day.Day
-                document.querySelectorAll(`#${this.festival} > .vis-timeline`)[i].classList.add(`${day.Day}`)
-                
-                if (i > 0) {
-                    document.querySelectorAll(`#${this.festival} > .vis-timeline`)[i].classList.add('hidden')
-                    // document.querySelectorAll(`#${this.festival} > .vis-loading-screen`)[i].classList.add('hidden')
-                }
+                tab.classList.add('flex-1','bg-skin-accent','p-4','flex','justify-center')
+                if (i === 0) { tab.classList.add('border-skin-muted', 'border-2')}
+                this.tabs.appendChild(tab)
+                this.table.querySelectorAll('.vis-timeline')[i].classList.add(`${day.Day}`)
 
                 tab.addEventListener('click', () => {
-                    document.querySelectorAll(`#${this.festival} > .vis-timeline:not(.${day.Day})`).forEach(x => x.classList.add('hidden'))
-                    document.querySelector(`#${this.festival} > .${day.Day}`).classList.remove('hidden')
+                    this.selectTab(day.Day, i)
                 })
 
-                if (i === 0) { 
-                    this.loading = true
-                    const tabContainer = document.createElement('div')
-                    tabContainer.id = `tabContainer_${this.festival}`
-                    tabContainer.classList.add('flex','w-full','gap-2','mb-1')
-                    container.prepend(tabContainer)
-                }
-                
-                document.querySelector(`#tabContainer_${this.festival}`).appendChild(tab)
-
+                this.loading = true
                 timeline.on("currentTimeTick", () => {
-                    container.classList.remove('h-0')
+                    this.clashfinder.classList.remove('h-0')
                     timeline.off("currentTimeTick")
                     this.loading = false
                 })
-                this.timelines.push(timeline)
 
+                this.timelines.push(timeline)
             })
         }
     }
