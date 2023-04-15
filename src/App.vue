@@ -8,7 +8,7 @@ import Clashfinder from './components/clashfinder/Clashfinder.vue'
 <template>
   <div class="flex flex-col w-full">
     <div class="relative text-skin-inverted max-w-[1080px]">
-      <h1 class="text-5xl font-bold mt-20">Festival Planner</h1>
+      <h1 class="text-5xl font-bold mt-5">Festival Planner</h1>
       <Buttons @festivalSelect="festivalSelected" :festivals="festivals"/>
     </div>
     <Clashfinder :festival="currentFestival" :festivals="festivals"/>
