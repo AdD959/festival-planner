@@ -1,3 +1,27 @@
+.vis-timeline {
+    margin-bottom: 2.5rem;
+    visibility: hidden;
+}
+
+.vis-item {
+    border: solid black 2px;
+}
+
+.vis-item-overflow {
+    background-color: white;
+}
+
+.vis-item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    right: -6px;
+    bottom: -6px;
+    z-index: -10;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,26 +49,3 @@
 --tertiary: #6457A6;
 --accent: #23F0C7; */
 
-.vis-timeline {
-    margin-bottom: 2.5rem;
-    visibility: hidden;
-}
-
-.vis-item {
-    border: solid black 2px;
-}
-
-.vis-item-overflow {
-    background-color: white;
-}
-
-.vis-item::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    right: -6px;
-    bottom: -6px;
-    z-index: -10;
-}

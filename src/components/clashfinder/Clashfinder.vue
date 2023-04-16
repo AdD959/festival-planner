@@ -13,7 +13,7 @@ import Loading from '../animations/Loading.vue'
             </div>
         </div>
     </div>
-    <Loading :show="loading"/>
+    <Loading :show="loading" />
 </template>
 
 <script>
@@ -65,7 +65,7 @@ export default {
                 })
         },
         selectTab(day, tabIndex) {
-            this.tabs.querySelectorAll('.tabs > button').forEach((tab,i) => {
+            this.tabs.querySelectorAll('.tabs > button').forEach((tab, i) => {
                 if (i !== tabIndex) {
                     tab.classList.remove('border-2')
                 } else {
@@ -99,24 +99,26 @@ export default {
                     max: '2022-02-17 01:00:00',
                     zoomFriction: 75,
                     zoomMin: 10000000,
-                    multiselect: true,
                     showTooltips: true,
+                    selectable: false
+
                 },
                 {
                     min: '2022-02-17 10:30:00',
                     max: '2022-02-18 01:00:00',
                     zoomFriction: 75,
                     zoomMin: 10000000,
-                    multiselect: true,
                     showTooltips: true,
+                    selectable: false
+
                 },
                 {
                     min: '2022-02-18 10:30:00',
                     max: '2022-02-19 01:00:00',
                     zoomFriction: 75,
                     zoomMin: 10000000,
-                    multiselect: true,
                     showTooltips: true,
+                    selectable: false
                 },
             ]
 
@@ -127,8 +129,8 @@ export default {
 
                 let tab = document.createElement('button')
                 tab.innerHTML = day.Day
-                tab.classList.add('flex-1','bg-skin-accent','p-4','flex','justify-center')
-                if (i === 0) { tab.classList.add('border-skin-muted', 'border-2')}
+                tab.classList.add('flex-1', 'bg-skin-accent', 'p-4', 'flex', 'justify-center')
+                if (i === 0) { tab.classList.add('border-skin-muted', 'border-2') }
                 this.tabs.appendChild(tab)
                 this.table.querySelectorAll('.vis-timeline')[i].classList.add(`${day.Day}`)
 
@@ -141,6 +143,16 @@ export default {
                     this.clashfinder.classList.remove('h-0')
                     timeline.off("currentTimeTick")
                     this.loading = false
+
+                    document.querySelectorAll('.vis-item-overflow').forEach(item => {
+                        item.addEventListener('click', () => {
+                            if (item.classList.contains('bg-skin-accent')) {
+                                item.classList.remove('bg-skin-accent')
+                            } else {
+                                item.classList.add('bg-skin-accent')
+                            }
+                        })
+                    })
                 })
 
                 this.timelines.push(timeline)
