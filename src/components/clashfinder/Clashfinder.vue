@@ -18,7 +18,7 @@ import Loading from '../animations/Loading.vue'
 
 <script>
 export default {
-    props: { festival: String, festivals: Array },
+    props: { festival: String, festivals: Array, spotifyData: Object },
     data() {
         return {
             timelines: [],
@@ -26,7 +26,8 @@ export default {
             target: null,
             clashfinder: null,
             table: null,
-            tabs: null
+            tabs: null,
+            festivalData: null
         }
     },
     watch: {
@@ -41,6 +42,33 @@ export default {
             } else {
                 this.target.classList.remove('hidden')
             }
+        },
+        spotifyData() {
+            let spotifyArr = Object.keys(this.spotifyData)
+            const matches = []
+
+            console.log('triggered')
+            console.log(this.festivalData)
+            return;
+            this.festivalData.forEach(day =>
+                day.Artists.forEach(artist => {
+                spotifyArr.forEach(s_artist => {
+                    const s_artist_upper = s_artist.toUpperCase()
+                    if (s_artist_upper.includes(artist.content)) {
+                    matches.push(artist.id)
+                    }
+                })
+                }))
+            this.timelines.forEach((t,i) => {
+                t.setSelection(matches);
+                t.on('itemover', function (event) {
+                var itemId = event.item;
+                console.log(this.$data.datasets)
+                var item = this.datasets[i].get(itemId);
+                item.className = 'myClass';
+                items.update(item);
+                });
+            })
         }
     },
     methods: {

@@ -3,13 +3,19 @@
 </script>
 
 <template>
-    <div>
-        <label for="connect-to-spotify" :class="disableSpotifyButton ? 'text-[green]' : ''" class="block text-xs" v-text="disableSpotifyButton ? 'Connected to Spotify' : 'Connect to Spotify'"></label>
-        <button @click="auth" :class="disableSpotifyButton ? 'cursor-not-allowed grayscale opacity-20' : ''" :disabled="disableSpotifyButton" aria-label="connect-to-spotfiy" class="relative p-2 border-2 border-skin-muted text-skin-base flex items-center bg-skin-muted">
-            <ButtonShadow />
-            Connect
-            <img class="w-5 ml-2" src="../../assets/Spotify_icon.png" alt="Spotify Icon">
-        </button>
+    <div class="flex">
+        <div>
+            <label for="connect-to-spotify" :class="disableSpotifyButton ? 'text-[green]' : ''" class="block text-xs" v-text="disableSpotifyButton ? 'Connected to Spotify' : 'Connect to Spotify'"></label>
+            <button @click="auth" :class="disableSpotifyButton ? 'cursor-not-allowed grayscale opacity-20' : ''" :disabled="disableSpotifyButton" aria-label="connect-to-spotfiy" class="relative p-2 border-2 border-skin-muted text-skin-base flex items-center bg-skin-muted">
+                <ButtonShadow />
+                Connect
+                <img class="w-5 ml-2" src="../../assets/Spotify_icon.png" alt="Spotify Icon">
+            </button>
+        </div>
+        <div :class="disableSpotifyButton ? 'block' : 'hidden'">
+            <label class="text-xs block mt-4"></label>
+            <button aria-label="toggle" @click="toggleButton" :class="toggleSelected ? 'bg-[#26e669]' : ''" class="relative p-2 border-2 border-skin-muted text-skin-inverted flex items-center">Toggle</button>
+        </div>
     </div>
 </template>
 
@@ -28,7 +34,7 @@ export default {
             trackRequests: 0,
             showJSON: false,
             disableSpotifyButton: false,
-            toggleEnabled: false
+            toggleSelected: false
         }
     },
     methods: {
@@ -43,8 +49,8 @@ export default {
             this.checkAuth()
         },
         toggleButton() {
+            this.toggleSelected = !this.toggleSelected
             this.$emit('spotifySync', this.results)
-            this.toggleEnabled = !this.toggleEnabled
         },
         checkAuth() {
             const cachedTracks = window.localStorage.getItem("cachedSpotifyLibrary_1");

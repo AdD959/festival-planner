@@ -9,9 +9,9 @@ import Clashfinder from './components/clashfinder/Clashfinder.vue'
   <div class="flex flex-col w-full">
     <div class="relative text-skin-inverted max-w-[1080px]">
       <h1 class="text-5xl font-bold mt-5">Festival Planner</h1>
-      <Buttons @festivalSelect="festivalSelected" :festivals="festivals"/>
+      <Buttons @festivalSelect="festivalSelected" :festivals="festivals" @spotifySync="toggleSpotifyBands"/>
     </div>
-    <Clashfinder :festival="currentFestival" :festivals="festivals"/>
+    <Clashfinder :festival="currentFestival" :festivals="festivals" :spotifyData="spotifyData" />
   </div>
   <TestBar v-show="env === 'dev'" />
 </template>
@@ -21,6 +21,7 @@ export default {
   data() {
     return {
       env: import.meta.env.VITE_ENVIRONMENT,
+      spotifyData: {},
       currentFestival: '',
       festivals: [
         'glastonbury-2022',
@@ -33,9 +34,12 @@ export default {
     Buttons, TestBar
   },
   methods: {
+    toggleSpotifyBands(data) {
+      this.spotifyData = data
+    },
     festivalSelected(festival) {
       this.currentFestival = festival
-    }
+    },
   }
 }
 </script>
