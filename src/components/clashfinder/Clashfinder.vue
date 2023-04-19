@@ -3,6 +3,15 @@ import Error from '../errors/Generic.vue'
 import Loading from '../animations/Loading.vue'
 </script>
 
+<style>
+.vis-selected {
+    border-color: #26e669 !important;
+}
+.vis-selected::after {
+    background-color: #26e669;
+}
+</style>
+
 <template>
     <div id="container">
         <div v-for="festival in festivals" :id="festival">
@@ -43,35 +52,32 @@ export default {
                 this.target.classList.remove('hidden')
             }
         },
-        spotifyData() {
+    },
+    methods: {
+        async highlight(data) {
             let spotifyArr = Object.keys(this.spotifyData)
             const matches = []
 
-            console.log('triggered')
-            console.log(this.festivalData)
-            return;
-            this.festivalData.forEach(day =>
+            data.forEach(day =>
                 day.Artists.forEach(artist => {
-                spotifyArr.forEach(s_artist => {
-                    const s_artist_upper = s_artist.toUpperCase()
-                    if (s_artist_upper.includes(artist.content)) {
-                    matches.push(artist.id)
-                    }
-                })
+                    spotifyArr.forEach(s_artist => {
+                        const s_artist_upper = s_artist.toUpperCase()
+                        if (s_artist_upper.includes(artist.content)) {
+                            matches.push(artist.id)
+                        }
+                    })
                 }))
-            this.timelines.forEach((t,i) => {
+            this.timelines.forEach((t, i) => {
                 t.setSelection(matches);
                 t.on('itemover', function (event) {
-                var itemId = event.item;
-                console.log(this.$data.datasets)
-                var item = this.datasets[i].get(itemId);
-                item.className = 'myClass';
-                items.update(item);
+                    // var itemId = event.item;
+                    // console.log(this.$data.datasets)
+                    // var item = this.datasets[i].get(itemId);
+                    // item.className = 'spotify-select';
+                    // items.update(item);
                 });
             })
-        }
-    },
-    methods: {
+        },
         async requestClashfinder() {
             // const url = input ? input : this.festival
             let errorStatus = false
@@ -89,6 +95,7 @@ export default {
                 .then(json => {
                     if (!errorStatus) {
                         this.createTable(json)
+                        this.highlight(json)
                     }
                 })
         },
@@ -175,9 +182,9 @@ export default {
                     document.querySelectorAll('.vis-item-overflow').forEach(item => {
                         item.addEventListener('click', () => {
                             if (item.classList.contains('bg-skin-accent')) {
-                                item.classList.remove('bg-skin-accent')
+                                item.classList.remove('bg-skin-accent','text-skin-inverted')
                             } else {
-                                item.classList.add('bg-skin-accent')
+                                item.classList.add('bg-skin-accent','text-skin-inverted')
                             }
                         })
                     })

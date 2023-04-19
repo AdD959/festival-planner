@@ -134,7 +134,7 @@ export default {
                 let offset = 0;
                 let batch = 0;
                 let batches = []
-                // while (offset < 400) {
+                while (offset < 400) {
                     this.trackRequests = window.localStorage.getItem("trackRequests");
                     console.log('track requests:' + this.trackRequests)
                     if (!this.trackRequests) {
@@ -156,9 +156,7 @@ export default {
                         .catch(err => console.error(err));
                     batch++;
                     offset += 50;
-                // }
-                
-                // 
+                }
             }
         },
         deleteCache() {
