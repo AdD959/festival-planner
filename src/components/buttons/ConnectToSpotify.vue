@@ -57,11 +57,20 @@ export default {
             if (cachedTracks) {
                 this.disableSpotifyButton = true;
                 console.log('cached tracks have been found.')
-                this.interpret(JSON.parse(cachedTracks))
+                try {
+                    this.interpret(JSON.parse(cachedTracks))
+                } catch {
+                    console.log(JSON.parse(cachedTracks));
+                    if (JSON.parse(cachedTracks).error.status === 401) {
+                        window.localStorage.removeItem('spotifyWebAPIAccessToken')
+                        console.log(window.localStorage.getItem('spotifyWebAPIAccessToken'))
+                        // this.checkAuth()
+                    }
+                }
                 return;
             } else {
                 console.log('no cached tracks have been found.')
-                const accessToken = window.localStorage.getItem("spotifyWebAPIAccessToken");
+                const accessToken = window.localStorage.getItem("spotifyWebAPIAccessToken")
                 if (accessToken) { this.getArtistData(); console.log('access token found') }
                 else if (window.location.search) {
                     console.log('access token not found, checking if the page returned contains callback code...')
@@ -94,7 +103,7 @@ export default {
                                 message = "Error: " + response.error_description + " (" + response.error + ")";
                             }
 
-                            document.getElementById("result").innerHTML = message;
+                            // document.getElementById("result").innerHTML = message;
                         }.bind(this);
                         xhr.responseType = 'json';
                         xhr.open("POST", 'https://accounts.spotify.com/api/token', true);
@@ -151,7 +160,9 @@ export default {
                         },
                     })
                         .then(response => response.json())
-                        .then(res => { window.localStorage.setItem(`cachedSpotifyLibrary_${batch}`, JSON.stringify(res)); return res; })
+                        .then(res => { 
+                                window.localStorage.setItem(`cachedSpotifyLibrary_${batch}`, JSON.stringify(res)); return res; 
+                        })
                         .then(response => { this.interpret(response); })
                         .catch(err => console.error(err));
                     batch++;
@@ -198,6 +209,7 @@ export default {
                 });
         },
         interpret(response) {
+            console.log(response)
             const items = response.items;
             items.forEach(item => {
                 item.track.artists.forEach(artist => {
